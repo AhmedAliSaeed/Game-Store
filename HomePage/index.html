@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Store</title>
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/featured.css" />
+    <link rel="stylesheet" href="Styles/category.css" />
+    <link rel="stylesheet" href="Styles/hero.css" />
+    <link rel="stylesheet" href="Styles/scroll.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../Images/Other/logo.png">
+            <h1>GameZone</h1>
+        </div>
+        <nav>
+            <p><a href="../Games/Games.html">Browse Games</a></p>
+            <p><a href="#">Cart</a></p>
+            <p><a href="../Login/login.html">Login</a></p>
+            <p><a href="../Register/Register.html">Register</a></p>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero auto-blur auto-scroll">
+            <div class="hero-vid">
+                <video loop autoplay muted class="hero-video" src="../Videos/hero-1.mp4"></video>
+                <div class="overlay"></div>
+                <div class="hero-info">
+                    <h1>God of War</h1>
+                    <button><a href="https://www.youtube.com/watch?v=K0u_kAWLJOA" target="_blank">See
+                            Trailer</a></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section ">
+            <div class="auto-blur">
+                <h1>The Ultimate Survival Horror Experience Is Back</h1>
+            </div>
+            <div id="scrollAnimation" class="s-image-box auto-resize auto-scroll">
+                <img src="../Images/Other/RE4.png" alt="">
+                <button>Pre-Order <span style="color: #C0192B;">N</span>ow !</button>
+            </div>
+        </section>
+
+        <section class="featured auto-scroll">
+            <h1 class="title">Featured Games</h1>
+
+            <div class="container">
+                <div class="slide">
+                    <div class="item" style="background-image: url(../Images/GameCovers/RDR2.jpg);">
+                        <div class="content">
+                            <div class="name">Red Dead Redemption 2</div>
+                            <div class="des">Red Dead Redemption 2 is an open-world action-adventure game set in 1899.
+                                You play as outlaw Arthur Morgan, navigating the fall of the Wild West with deep
+                                storytelling, stunning visuals, and immersive gameplay.</div>
+                            <button><a href="../GameDetails/gameDetails.html">See More</a></button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(../Images/GameWallpapers/PUBG.jpg);">
+                        <div class="content">
+                            <div class="name">PUBG</div>
+                            <div class="des">PUBG (PlayerUnknown's Battlegrounds) is a battle royale shooter where up to
+                                100 players fight to be the last one standing. Players parachute onto an island,
+                                scavenge for weapons, and survive as the play area shrinks.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(../Images/GameCovers/DMC5.jpg);">
+                        <div class="content">
+                            <div class="name">Devil May Cry 5</div>
+                            <div class="des">Devil May Cry 5 is a fast-paced action game where players control demon
+                                hunters Nero, Dante, and V as they battle demonic forces in a stylish, combo-driven
+                                combat system.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(../Images/GameCovers/GOW.jpg);">
+                        <div class="content">
+                            <div class="name">God of War</div>
+                            <div class="des">God of War is an action-adventure game that follows Kratos, a former Greek
+                                god, on a journey with his son Atreus through Norse mythology, blending intense combat
+                                with deep storytelling and emotional depth.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(../Images/GameCovers/FIFA.jpg);">
+                        <div class="content">
+                            <div class="name">FIFA 23</div>
+                            <div class="des">FIFA 23 is a football simulation game by EA Sports featuring realistic
+                                gameplay, men's and women's World Cups, and club teams from top leagues. It’s the final
+                                FIFA-branded title before EA rebrands the series.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(../Images/GameCovers/FC5.jpg);">
+                        <div class="content">
+                            <div class="name">Far Cry 5</div>
+                            <div class="des">Far Cry 5 is an open-world first-person shooter where you fight against a
+                                dangerous cult in rural Montana. It features exploration, action, and player choice in a
+                                vast, dynamic environment.</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="button">
+                    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="genres">
+            <h1 class="title">Popular Genres</h1>
+            <div class="categories">
+                <div class="category-slider">
+                <div class="category-card">
+                    <img src="../Images/Categories/Action.jpg" alt="Action Game Cover" />
+                    <h3>Action</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="../Images/Categories/Sports.jpg" alt="Sports Game Cover" />
+                    <h3>Sports</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="../Images/Categories/Shooter.jpg" alt="Shooter Game Cover" />
+                    <h3>Shooter</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="../Images/Categories/Horror.jpg" alt="Horror Game Cover" />
+                    <h3>Horror</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="../Images/Categories/Fighting.jpg" alt="Fighting Game Cover" />
+                    <h3>Fighting</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="../Images/Categories/Racing.jpg" alt="Racing Game Cover" />
+                    <h3>Racing</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="../Images/Categories/RPG.jpg" alt="RPG Game Cover" />
+                    <h3>RPG</h3>
+                </div>
+            </div>
+
+            <div class="button">
+                <button id="c-prev" class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="c-next" class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            </div>
+            
+
+        </section>
+
+        <section class="top-rated">
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy GameZone 2025 - All rights reserved</p>
+        <ul>
+            <li><i class="fa-brands fa-youtube"></i></li>
+            <li><i class="fa-brands fa-discord"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitch"></i></li>
+            <li><i class="fa-brands fa-tiktok"></i></li>
+        </ul>
+        <p>Privacy Policy</p>
+    </footer>
+
+    <script src="Scripts/Featured.js"></script>
+    <script src="Scripts/categories.js"></script>
+    <script src="Scripts/scroll.js"></script>
+</body>
+
+</html>
