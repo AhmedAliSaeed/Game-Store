@@ -16,13 +16,14 @@
         <div class="left">
             <div class="login">
                 <h1>Login</h1>
-                <form action="../HomePage/index.html">
+                <form>
                     <input type="text" name="username" placeholder="Enter your name"  required>
                     <input type="password" name="password" placeholder="Enter password here"  required>
-                    <button>Login</button>
+                    <input type="checkbox" name="remember" value=""> <span>Remember Me</span>
+                    <button onclick="login()">Login</button>
                 </form>
                 <p>OR</p>
-                <p>You Don't Have an Account? <a href="./SignUp.html">Register Here</a></p>
+                <p>You Don't Have an Account? <a href="../Register/Register.html">Register Here</a></p>
             </div>
         </div>
 
@@ -34,5 +35,7 @@
     <div class="footer">
         <h1>Footer here</h1>
     </div>
+
+    <script src="./Scripts/login.js"></script>
 </body>
 </html>
