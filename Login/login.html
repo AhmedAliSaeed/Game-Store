@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="./Styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/f0c99c8fcf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="nav">
-        <h1>Navbar Here</h1>
+      <header>
+        <div class="logo">
+          <img src="../Images/Other/logo.png" />
+          <h1>GameZone</h1>
+        </div>
+        <nav>
+          <p><a href="../Games/Games.html">Browse Games</a></p>
+          <p><a href="#">Cart</a></p>
+          <p><a href="../Login/login.html">Login</a></p>
+          <p><a href="../Register/Register.html">Register</a></p>
+        </nav>
+      </header>
     </div>
 
-    <img src="./Animation - 1748082512247.gif" alt="" class="animatedImg">
+    <img
+      src="../Images/temp/Animation - 1748082512247.gif"
+      alt=""
+      class="animatedImg"
+    />
     <div class="body">
-        <div class="left">
-            <div class="login">
-                <h1>Login</h1>
-                <form>
-                    <input type="text" name="username" placeholder="Enter your name"  required>
-                    <input type="password" name="password" placeholder="Enter password here"  required>
-                    <input type="checkbox" name="remember" value=""> <span>Remember Me</span>
-                    <button onclick="login()">Login</button>
-                </form>
-                <p>OR</p>
-                <p>You Don't Have an Account? <a href="../Register/Register.html">Register Here</a></p>
+      <div class="left">
+        <div class="login">
+          <h1>Login</h1>
+          <form id="loginForm" onsubmit="event.preventDefault(); login();">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password here"
+              required
+            />
+            <div class="remember">
+              <input type="checkbox" name="remember" id="remember" />
+              <label for="remember">RememberMe</label>
             </div>
+            <button type="submit">Login</button>
+          </form>
+          <p>OR</p>
+          <p>
+            You Don't Have an Account?
+            <a href="../Register/Register.html">Register Here</a>
+          </p>
         </div>
+      </div>
 
-        <div class="right">
-            <video src="../Videos/login-video.mp4" autoplay loop muted></video>
-        </div>
+      <div class="right">
+        <video src="../Videos/login-video.mp4" autoplay loop muted></video>
+      </div>
+    </div>
+
+    <!-- Custom Alert -->
+    <div class="custom-alert" id="customAlert">
+      <div class="alert-content">
+        <span class="close-btn" id="closeAlert">×</span>
+        <h2 id="alert-title">Login Failed!</h2>
+        <p id="alert-message">Incorrect username or password. Please try again.</p>
+        <button class="alert-ok" id="alertOk">OK</button>
+      </div>
     </div>
 
     <div class="footer">
-        <h1>Footer here</h1>
+      <footer>
+        <p>© GameZone 2025 - All rights reserved</p>
+        <ul>
+          <li><i class="fa-brands fa-youtube"></i></li>
+          <li><i class="fa-brands fa-discord"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-twitch"></i></li>
+          <li><i class="fa-brands fa-tiktok"></i></li>
+        </ul>
+        <p>Privacy Policy</p>
+      </footer>
     </div>
 
     <script src="./Scripts/login.js"></script>
-</body>
+  </body>
 </html>

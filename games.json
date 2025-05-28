@@ -8,7 +8,7 @@
         "Category" : "Action",
         "ReleaseDate": "2022-06-03",
         "Publisher": "Rockstar",
-        "Ratings":[2,3,4,4,5,5,5,4,3,4,3,2,1],
+        "Ratings":82,
         "ImageUrl": "../Images/GameCovers/RDR2.jpg"
     },
     {
@@ -20,7 +20,7 @@
         "Category" : "Shooter",
         "ReleaseDate": "2018-06-03",
         "Publisher": "Tencent",
-        "Ratings":[2,3,3,1,2,2,4,5,5,5],
+        "Ratings":85,
         "ImageUrl": "../Images/GameCovers/PUBG.jpg"
     },
     {
@@ -32,7 +32,7 @@
         "Category" : "Action",
         "ReleaseDate": "2022-07-03",
         "Publisher": "Capcom",
-        "Ratings":[1,2,3,4,4,4,4,3,3,3,4,4,4],
+        "Ratings":81,
         "ImageUrl": "../Images/GameCovers/DMC5.jpg"
     },
     {
@@ -44,7 +44,7 @@
         "Category" : "RPG",
         "ReleaseDate": "2021-02-03",
         "Publisher": "Sony",
-        "Ratings":[5,5,5,4,5,5,4,3,3,3,4,4,4,4],
+        "Ratings":93,
         "ImageUrl": "../Images/GameCovers/GOW.jpg"
     },
     {
@@ -56,7 +56,7 @@
         "Category" : "Sports",
         "ReleaseDate": "2023-09-04",
         "Publisher": "EA",
-        "Ratings":[2,3,4,1],
+        "Ratings":77,
         "ImageUrl": "../Images/GameCovers/FIFA.jpg"
     },
     {
@@ -68,7 +68,7 @@
         "Category" : "Action",
         "ReleaseDate": "2020-02-04",
         "Publisher": "Ubisoft",
-        "Ratings":[4,4,4,4,3],
+        "Ratings":84,
         "ImageUrl": "../Images/GameCovers/FC5.jpg"
     },
     {
@@ -80,7 +80,7 @@
         "Category" : "Action",
         "ReleaseDate": "2020-04-04",
         "Publisher": "Sony",
-        "Ratings":[5,5,5,5,4,4],
+        "Ratings":97,
         "ImageUrl": "../Images/GameCovers/GOT.jpg"
     },
     {
@@ -92,7 +92,7 @@
         "Category" : "Racing",
         "ReleaseDate": "2024-05-03",
         "Publisher": "XBOX",
-        "Ratings":[3,4,5,5,4,3],
+        "Ratings":73,
         "ImageUrl": "../Images/GameCovers/FH5.jpg"
     },
     {
@@ -104,7 +104,7 @@
         "Category" : "RPG",
         "ReleaseDate": "2022-02-03",
         "Publisher": "Sony",
-        "Ratings":[2,2,3,3,4],
+        "Ratings":94,
         "ImageUrl": "../Images/GameCovers/CP.jpg"
     },
     {
@@ -116,7 +116,7 @@
         "Category" : "Action",
         "ReleaseDate": "2020-09-03",
         "Publisher": "Sony",
-        "Ratings":[2,2,3,3,4,3,4,4,5,5],
+        "Ratings":88,
         "ImageUrl": "../Images/GameCovers/U4.jpg"
     },
     {
@@ -128,7 +128,7 @@
         "Category" : "Action",
         "ReleaseDate": "2025-09-03",
         "Publisher": "Ubisoft",
-        "Ratings":[2,5,4,4,5,5],
+        "Ratings":90,
         "ImageUrl": "../Images/GameCovers/ACS.jpg"
     },
     {
@@ -140,7 +140,7 @@
         "Category" : "Fighting",
         "ReleaseDate": "2024-09-03",
         "Publisher": "Bandai Namco",
-        "Ratings":[4,4,5,5],
+        "Ratings":96,
         "ImageUrl": "../Images/GameCovers/T8.jpg"
     },
     {
@@ -152,7 +152,7 @@
         "Category" : "Horror",
         "ReleaseDate": "2023-09-03",
         "Publisher": "Capcom",
-        "Ratings":[4,4,5,5,3,2],
+        "Ratings":79,
         "ImageUrl": "../Images/GameCovers/RE4.jpg"
     },
     {
@@ -164,7 +164,7 @@
         "Category" : "Action",
         "ReleaseDate": "2023-09-03",
         "Publisher": "Sony",
-        "Ratings":[4,4,5,5,3,2,2],
+        "Ratings":85,
         "ImageUrl": "../Images/GameCovers/TLOU.jpg"
     },
     {
@@ -176,7 +176,7 @@
         "Category" : "RPG",
         "ReleaseDate": "2022-09-03",
         "Publisher": "FromSoftware",
-        "Ratings":[4,4,5,5,3,2,5],
+        "Ratings":94,
         "ImageUrl": "../Images/GameCovers/ER.jpg"
     },
     {
@@ -188,7 +188,7 @@
         "Category" : "Action",
         "ReleaseDate": "2024-09-03",
         "Publisher": "EA",
-        "Ratings":[4,4,5,5,3,2,5],
+        "Ratings":99,
         "ImageUrl": "../Images/GameCovers/SM2.jpg"
     }
     
