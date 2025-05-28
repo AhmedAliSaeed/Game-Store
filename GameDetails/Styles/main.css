@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=WDXL+Lubrifont+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, #0E2148 , #8547C6 , #0E2148);
+    scroll-behavior: smooth;
+}
+html{
+    scroll-snap-type: y proximity;
+}
+.auto-scroll{
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #1010105b;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    height: 60px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.logo img{
+    position: relative;
+    top: 22px;
+    width: 120px;
+    height: 120px;
+}
+.logo h1{
+    font-size: 38px;
+    font-family: "Nova Square", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: linear-gradient(to right, #DC3DDC , #03F6F0 );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 27%;
+}
+nav p a{
+    color: white;
+    padding: 0 10px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+nav p a:hover{
+    border-bottom: 5px #8547C6 solid;
+    color: #cc9cff;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23%;
+    background-color: rgba(0, 0, 0, 0.579);
+    color: white;
+    backdrop-filter: blur(10px);
+    margin-top: 60px;
+}
+
+footer p{
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+}
+
+footer ul{
+    height: 30px;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+    left: -80px;
+}
+
+footer ul li i{
+    font-size: 28px;
+    text-shadow: 1px 1px 10px black;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+footer ul li i:hover{
+    font-size: 40px;
+    color: #8547C6;
+}
+
+.auto-blur{
+    animation: blurAnimation both linear;
+    animation-timeline: view();
+}
+
+@keyframes blurAnimation{
+    0%{
+        filter:blur(20px);
+    }
+    20%,70%{
+        filter:blur(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        filter:blur(20px);
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.auto-resize{
+    animation: resizeAnimation both;
+    animation-timeline: view(100% 10%);
+}
+
+@keyframes resizeAnimation{
+    to{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin-bottom: 30px;
+    }
+
+}
