@@ -39,7 +39,7 @@ function GetData() {
             img.setAttribute('src', game.ImageUrl);
             title.textContent = game.Title;
             summary.textContent = game.Summary;
-            totalReviews.textContent = `(${game.Ratings.length} Reviews)`;
+            totalReviews.textContent = `${game.Ratings} / 100`;
             price.textContent = `${game.Price}$`;
             description.textContent = game.Overview;
 
