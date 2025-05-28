@@ -8,7 +8,7 @@
         "Category" : "Action",
         "ReleaseDate": "2022-06-03",
         "Publisher": "Rockstar",
-        "Ratings":[2,3,4,4,5,5,5,4,3,4,3,2,1],
+        "Ratings":82,
         "ImageUrl": "../Images/GameCovers/RDR2.jpg",
         "IngameUrls":["../Images/InGame/RDR2/1.jpg","../Images/InGame/RDR2/2.jpg","../Images/InGame/RDR2/3.jpg"]
     },
@@ -21,7 +21,7 @@
         "Category" : "Shooter",
         "ReleaseDate": "2018-06-03",
         "Publisher": "Tencent",
-        "Ratings":[2,3,3,1,2,2,4,5,5,5],
+        "Ratings":85,
         "ImageUrl": "../Images/GameCovers/PUBG.jpg",
         "IngameUrls":["../Images/InGame/PUBG/3.jpg","../Images/InGame/PUBG/2.jpg","../Images/InGame/PUBG/1.webp"]
     },
@@ -34,7 +34,7 @@
         "Category" : "Action",
         "ReleaseDate": "2022-07-03",
         "Publisher": "Capcom",
-        "Ratings":[1,2,3,4,4,4,4,3,3,3,4,4,4],
+        "Ratings":81,
         "ImageUrl": "../Images/GameCovers/DMC5.jpg",
         "IngameUrls":["../Images/InGame/DMC5/1.jpg","../Images/InGame/DMC5/2.jpg","../Images/InGame/DMC5/3.jpg"]
     },
@@ -47,9 +47,9 @@
         "Category" : "RPG",
         "ReleaseDate": "2021-02-03",
         "Publisher": "Sony",
-        "Ratings":[5,5,5,4,5,5,4,3,3,3,4,4,4,4],
         "ImageUrl": "../Images/GameCovers/GOW.jpg",
-        "IngameUrls":["../Images/InGame/GOW/1.avif","../Images/InGame/GOW/2.webp","../Images/InGame/GOW/3.jpg"]
+        "IngameUrls":["../Images/InGame/GOW/1.avif","../Images/InGame/GOW/2.webp","../Images/InGame/GOW/3.jpg"],
+        "Ratings":93
     },
     {
         "Id" : 5,
@@ -60,7 +60,7 @@
         "Category" : "Sports",
         "ReleaseDate": "2023-09-04",
         "Publisher": "EA",
-        "Ratings":[2,3,4,1],
+        "Ratings":77,
         "ImageUrl": "../Images/GameCovers/FIFA.jpg",
         "IngameUrls":["../Images/InGame/FIFA/1.webp","../Images/InGame/FIFA/2.jpg","../Images/InGame/FIFA/3.jpg"]
     },
@@ -73,7 +73,7 @@
         "Category" : "Action",
         "ReleaseDate": "2020-02-04",
         "Publisher": "Ubisoft",
-        "Ratings":[4,4,4,4,3],
+        "Ratings":77,
         "ImageUrl": "../Images/GameCovers/FC5.jpg",
         "IngameUrls":["../Images/InGame/FC5/1.jpg","../Images/InGame/FC5/2.jpg","../Images/InGame/FC5/3.avif"]
     },
@@ -86,7 +86,7 @@
         "Category" : "Action",
         "ReleaseDate": "2020-04-04",
         "Publisher": "Sony",
-        "Ratings":[5,5,5,5,4,4],
+        "Ratings":97,
         "ImageUrl": "../Images/GameCovers/GOT.jpg",
         "IngameUrls":["../Images/InGame/GOT/3.jpg","../Images/InGame/GOT/2.jpg","../Images/InGame/GOT/1.avif"]
     },
@@ -99,7 +99,7 @@
         "Category" : "Racing",
         "ReleaseDate": "2024-05-03",
         "Publisher": "XBOX",
-        "Ratings":[3,4,5,5,4,3],
+        "Ratings":77,
         "ImageUrl": "../Images/GameCovers/FH5.jpg",
         "IngameUrls":["../Images/InGame/FH5/1.webp","../Images/InGame/FH5/2.jpg","../Images/InGame/FH5/3.webp"]
     },
@@ -112,7 +112,7 @@
         "Category" : "RPG",
         "ReleaseDate": "2022-02-03",
         "Publisher": "Sony",
-        "Ratings":[2,2,3,3,4],
+        "Ratings":87,
         "ImageUrl": "../Images/GameCovers/CP.jpg",
         "IngameUrls":["../Images/InGame/CP/1.jpg","../Images/InGame/CP/2.jpg","../Images/InGame/CP/3.webp"]
     },
@@ -125,7 +125,7 @@
         "Category" : "Action",
         "ReleaseDate": "2020-09-03",
         "Publisher": "Sony",
-        "Ratings":[2,2,3,3,4,3,4,4,5,5],
+        "Ratings":78,
         "ImageUrl": "../Images/GameCovers/U4.jpg",
         "IngameUrls":["../Images/InGame/U4/1.jpg","../Images/InGame/U4/2.jpg","../Images/InGame/U4/3.avif"]
     },
@@ -138,7 +138,7 @@
         "Category" : "Action",
         "ReleaseDate": "2025-09-03",
         "Publisher": "Ubisoft",
-        "Ratings":[2,5,4,4,5,5],
+        "Ratings":98,
         "ImageUrl": "../Images/GameCovers/ACS.jpg",
         "IngameUrls":["../Images/InGame/ACS/1.avif","../Images/InGame/ACS/2.avif","../Images/InGame/ACS/3.jpg"]
     },
@@ -151,7 +151,7 @@
         "Category" : "Fighting",
         "ReleaseDate": "2024-09-03",
         "Publisher": "Bandai Namco",
-        "Ratings":[4,4,5,5],
+        "Ratings":77,
         "ImageUrl": "../Images/GameCovers/T8.jpg",
         "IngameUrls":["../Images/InGame/T8/1.webp","../Images/InGame/T8/2.jpg","../Images/InGame/T8/3.webp"]
     },
@@ -164,7 +164,7 @@
         "Category" : "Horror",
         "ReleaseDate": "2023-09-03",
         "Publisher": "Capcom",
-        "Ratings":[4,4,5,5,3,2],
+        "Ratings":79,
         "ImageUrl": "../Images/GameCovers/RE4.jpg",
         "IngameUrls":["../Images/InGame/RE4/1.webp","../Images/InGame/RE4/2.jpg","../Images/InGame/RE4/3.jpg"]
     },
@@ -177,7 +177,7 @@
         "Category" : "Action",
         "ReleaseDate": "2023-09-03",
         "Publisher": "Sony",
-        "Ratings":[4,4,5,5,3,2,2],
+        "Ratings":66,
         "ImageUrl": "../Images/GameCovers/TLOU.jpg",
         "IngameUrls":["../Images/InGame/TLOU/1.jpg","../Images/InGame/TLOU/2.avif","../Images/InGame/TLOU/3.jpg"]
     },
@@ -190,7 +190,7 @@
         "Category" : "RPG",
         "ReleaseDate": "2022-09-03",
         "Publisher": "FromSoftware",
-        "Ratings":[4,4,5,5,3,2,5],
+        "Ratings":83,
         "ImageUrl": "../Images/GameCovers/ER.jpg",
         "IngameUrls":["../Images/InGame/ER/1.jpg","../Images/InGame/ER/2.webp","../Images/InGame/ER/3.jpg"]
     },
@@ -203,7 +203,7 @@
         "Category" : "Action",
         "ReleaseDate": "2024-09-03",
         "Publisher": "EA",
-        "Ratings":[4,4,5,5,3,2,5],
+        "Ratings":55,
         "ImageUrl": "../Images/GameCovers/SM2.jpg",
         "IngameUrls":["../Images/InGame/SM2/1.jpg","../Images/InGame/SM2/2.jpg","../Images/InGame/SM2/3.jpg"]
     }
