@@ -122,10 +122,20 @@
     text-transform: uppercase;
     font-weight: 800;
 }
+
+.content button a {
+    color: black;
+    text-decoration: none;
+}
+
 .content button:hover{
-    color:white;
     background-color: #8547C6;
 }
+
+.content button:hover a{
+    color:white;
+}
+
 
 
 @keyframes animate {

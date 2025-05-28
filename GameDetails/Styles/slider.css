@@ -34,7 +34,8 @@
     font-family: monospace;
     font-weight: bold;
     left: 5%;
-    z-index: 33;
+    z-index: 333;
+    cursor: pointer;
 }
 #next{
     left: unset;

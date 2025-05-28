@@ -48,13 +48,11 @@
 
                 <div class="price">
                     <span class="current-price">$249.99</span>
-                    <span class="old-price">$299.99</span>
-                    <span class="discount">Save 17%</span>
                 </div>
 
                 <div class="actions">
                     <button class="add-to-cart">
-                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                        
                     </button>
                 </div>
             </div>
@@ -62,17 +60,9 @@
 
         <div class="about-game-centered">
             <div class="games-slider">
-                <div class="item">
-                    <img src="../Images/InGame/SM2/1.jpg">
-                </div>
-               <div class="item">
-                    <img src="../Images/InGame/SM2/2.jpg">
-                </div>
-                <div class="item">
-                    <img src="../Images/InGame/SM2/3.jpg">
-                </div>
-                <button id="next">></button>
-                <button id="prev"><</button>
+
+                <button id="next" onclick="Next()">></button>
+                <button id="prev" onclick="Prev()"><</button>
             </div>
             <div class="game-info">
                 <h3>About the Game</h3>
@@ -84,30 +74,6 @@
         <section class="games-you-may-like">
             <h3>Games You May Like</h3>
             <div class="game-cards">
-                <div class="game-card">
-                    <img src="../Images/GameCovers/CP.jpg" alt="Game 1">
-                    <h4>Batman: Arkham Knight</h4>
-                    <p>$199.99</p>
-                    <button class="show-more" data-game="batman-arkham-knight">
-                        <a href="gameDetails_batman-arkham-knight.html">Show More</a>
-                    </button>
-                </div>
-                <div class="game-card">
-                    <img src="../Images/GameCovers/RDR2.jpg" alt="Game 2">
-                    <h4>Marvel's Avengers</h4>
-                    <p>$179.99</p>
-                    <button class="show-more" data-game="marvels-avengers">
-                        <a href="gameDetails_marvels-avengers.html">Show More</a>
-                    </button>
-                </div>
-                <div class="game-card">
-                    <img src="../Images/GameCovers/U4.jpg" alt="Game 3">
-                    <h4>Guardians of the Galaxy</h4>
-                    <p>$189.99</p>
-                    <button class="show-more" data-game="guardians-of-the-galaxy">
-                        <a href="gameDetails_guardians-of-the-galaxy.html">Show More</a>
-                    </button>
-                </div>
             </div>
         </section>
     </main>
@@ -124,8 +90,8 @@
         <p>Privacy Policy</p>
     </footer>
 
-    <script src="./Scripts/slider.js"> 
-    </script>
+    <script src="./Scripts/load.js"></script>
+
     <script>
         const addToCartButtons = document.querySelectorAll('.add-to-cart');
         const showMoreButtons = document.querySelectorAll('.show-more');
@@ -134,22 +100,6 @@
             button.addEventListener('click', function() {
                 const gameTitle = this.closest('.product-details')?.querySelector('h1')?.textContent;
                 alert(`Added ${gameTitle} to your cart!`);
-            });
-        });
-
-        // showMoreButtons.forEach(button => {
-        //     button.addEventListener('click', function(e) {
-        //         e.preventDefault();
-        //         const game = this.getAttribute('data-game');
-        //         window.open(`gameDetails_${game}.html`);
-                
-        //     });
-        // });
-          showMoreButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const game = this.getAttribute('data-game');
-                window.location.href = `gameDetails_${game}.html`;
             });
         });
     </script>

@@ -120,7 +120,8 @@ function register() {
     const newUser = {
       username: inputs.username.value,
       email: inputs.email.value,
-      password: inputs.password.value
+      password: inputs.password.value,
+      gamesOwned: []
     };
     var users = getUsers();
     const usernameExists = users.some(user => user.username === newUser.username);
