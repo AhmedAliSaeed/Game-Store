@@ -121,7 +121,8 @@ function register() {
       username: inputs.username.value,
       email: inputs.email.value,
       password: inputs.password.value,
-      gamesOwned: []
+      gamesOwned: [],
+      cartItems: []
     };
     var users = getUsers();
     const usernameExists = users.some(user => user.username === newUser.username);
