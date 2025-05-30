@@ -35,7 +35,7 @@ function login() {
         }   
         else
         {
-            document.cookie = `username=${username.value} path=/;`;
+            document.cookie = `username=${username.value}; path=/;`;
         }
         window.location.href = '../HomePage/index.html';
     } else {

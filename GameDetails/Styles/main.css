@@ -63,8 +63,9 @@ header{
 
 nav{
     display: flex;
-    justify-content: space-between;
-    width: 27%;
+    justify-content: flex-end;
+    gap: .8em;
+    width: 35%;
 }
 nav p a{
     color: white;

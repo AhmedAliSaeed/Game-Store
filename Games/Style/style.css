@@ -191,7 +191,7 @@ body {
 
 .pro-body .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: 350px 350px 350px 350px;
     width: 100%;
     gap: 20px;
     text-align: center;
