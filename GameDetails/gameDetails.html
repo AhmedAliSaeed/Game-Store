@@ -48,8 +48,7 @@
                 </div>
 
                 <div class="actions">
-                    <button class="add-to-cart">
-                        
+                    <button class="add-to-cart" onclick='AddToCart()'>
                     </button>
                 </div>
             </div>
@@ -90,16 +89,5 @@
     <script src="./Scripts/load.js"></script>
     <script src="../HomePage/Scripts/nav.js"></script>
 
-    <script>
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        const showMoreButtons = document.querySelectorAll('.show-more');
-
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const gameTitle = this.closest('.product-details')?.querySelector('h1')?.textContent;
-                alert(`Added ${gameTitle} to your cart!`);
-            });
-        });
-    </script>
 </body>
 </html>

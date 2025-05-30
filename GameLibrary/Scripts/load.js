@@ -14,8 +14,6 @@ GetData();
 
 
 function loadShow() {
-    console.log(items);
-
     let stt = 0;
     items[active].style.transform = `none`;
     items[active].style.zIndex = 1;
@@ -53,9 +51,10 @@ function GetData() {
             
             filtered.forEach(x => {
                 slider.innerHTML += `
-                    <div class="item">
+                    <div class="item" onclick='StartGame()'>
                         <img src="${x.ImageUrl}">
                         <h2>${x.Title}</h2>
+                        <i class="fa-solid fa-play"></i>
                     </div>            `
             });
 
@@ -102,4 +101,8 @@ function slideR(){
 function SlideL() {
     active = active - 1 >= 0 ? active - 1 : active;
     loadShow();
+}
+
+function StartGame(){
+    alert('Started ' + items[active].children[1].textContent);
 }

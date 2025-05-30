@@ -56,6 +56,12 @@ function GetData() {
                 btn.innerHTML = `
                 <i class="fa-solid fa-check"></i> Purchased
                 `;
+            }
+            else if(user && user.cartItems.includes(game.Id)){
+                btn.style.pointerEvents = 'none';
+                btn.innerHTML = `
+                <i class="fa-solid fa-check"></i> Added To Cart
+                `;
             }           
             else{
                 btn.innerHTML = `
@@ -64,9 +70,8 @@ function GetData() {
             }
             
             const allowed = [];
-
             for (let i = 1; i <= 16; i++) 
-                if (!gameIds.includes(i)) 
+                if (Number(id) != i && (!user || !gameIds.includes(i))) 
                     allowed.push(i);
             
             // Shuffle the allowed array
@@ -120,4 +125,19 @@ function Next() {
  function Prev() {
     active = active - 1 >= 0 ? active - 1 : items.length - 1;
     loadShow();
+}
+
+function AddToCart(){
+
+    if(!user){
+        window.location.href = '../Login/Login.html';
+    }
+    var users = JSON.parse(localStorage.getItem('users'));
+    user = users.filter(x => x.username === loggedUsername.split('=')[1])[0];
+    user.cartItems.push(Number(id));
+    localStorage.setItem('users',JSON.stringify(users));
+    btn.style.pointerEvents = 'none';
+    btn.innerHTML = `
+    <i class="fa-solid fa-check"></i> Added To Cart
+    `;
 }
