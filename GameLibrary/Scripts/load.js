@@ -68,11 +68,17 @@ function GetData() {
                 x.addEventListener('mouseenter',()=>{
                     var img = x.getAttribute('src');
                     img = img.replace('GameCovers','GameWallpapers');
+                    
                     timeout = setTimeout(()=> {
                         overlay.style.display = 'block';
                         overlay.style.animationPlayState = 'running';
                         background.style.background = `url(${img})`;
                         background.style.backgroundSize = 'cover';
+
+                        items.forEach((x,i) => {
+                            if(i != active)
+                                x.style.opacity = 0;
+                        })
 
                         audio.currentTime = 0;
                         audio.muted = false;
@@ -84,6 +90,11 @@ function GetData() {
             
             images.forEach(x => {
                 x.addEventListener('mouseleave',()=>{
+
+                    items.forEach((x,i) => {
+                        if(i != active && Math.abs(i-active) < 4)
+                            x.style.opacity = 0.6;
+                    })
                     clearTimeout(timeout);
                     overlay.style.display = 'none';
                     background.style.background = 'none';
