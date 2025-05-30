@@ -22,3 +22,8 @@ function Logout(){
     window.location.href = '../HomePage/index.html';
 }
 //        <p> Welcome <span style='color:red;'>${username}</span></p>
+
+var logo = document.querySelector('header .logo');
+logo.addEventListener('click',()=>{
+    window.location.href = '../HomePage/index.html';
+})
