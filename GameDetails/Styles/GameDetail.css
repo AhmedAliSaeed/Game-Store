@@ -66,23 +66,23 @@ body {
     }
 
     25% {
-        transform: translateX(80%) translateY(-40%)  scale(0.75) rotate(100deg);
+        transform: translateX(15vw) translateY(-40%)  scale(0.75) rotate(100deg);
     }
 
     50% {
-        transform: translateX(160%) translateY(-60%) scale(0.50) rotate(200deg);
+        transform: translateX(30vw) translateY(-60%) scale(0.50) rotate(200deg);
     }
 
     75% {
-        transform: translateX(240%) translateY(-62%) scale(0.25) rotate(300deg);
+        transform: translateX(45vw) translateY(-62%) scale(0.25) rotate(300deg);
     }
 
     to {
-        transform: translateX(320%) translateY(-65%)  scale(0) rotate(400deg);
+        transform: translateX(55vw) translateY(-65%)  scale(0) rotate(400deg);
     }
 }
 .fa-cart-shopping{
-    animation: cart-open .7s linear .85s;
+    animation: cart-open .7s ease-in-out .85s;
     animation-play-state: paused;
 }
 
