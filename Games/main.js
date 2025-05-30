@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clone.querySelector('#proRate').textContent = game.Ratings + '%';
                 clone.querySelector('#proDate').textContent = new Date(game.ReleaseDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
-                clone.querySelector('.view-btn a').href = `./ProductDetails.html?id=${game.Id}`;
+                clone.querySelector('.view-btn a').href = `../GameDetails/gameDetails.html?id=${game.Id}`;
 
                 container.appendChild(clone);
             });

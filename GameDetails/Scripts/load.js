@@ -71,7 +71,7 @@ function GetData() {
             
             const allowed = [];
             for (let i = 1; i <= 16; i++) 
-                if (!user || !gameIds.includes(i)) 
+                if (Number(id) != i && (!user || !gameIds.includes(i))) 
                     allowed.push(i);
             
             // Shuffle the allowed array
