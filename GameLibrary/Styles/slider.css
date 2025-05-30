@@ -5,6 +5,7 @@
     overflow: hidden;
     margin-top: 4.7em;
     margin-bottom: 3em;
+    pointer-events: all;
 }
 
 .item{
@@ -44,11 +45,13 @@
     top: 40%;
     color: white;
     background-color: transparent;
+    cursor: pointer;
     border: none;
     font-size: 40px;
     font-family: monospace;
     font-weight: bold;
     left: 5%;
+    z-index: 9999;
 }
 #next{
     left: unset;

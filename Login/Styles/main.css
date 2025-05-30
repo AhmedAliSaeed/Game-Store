@@ -12,41 +12,11 @@
 }
 
 body{
-    background: linear-gradient(to right, #0E2148 , #8547C6 , #0E2148);
     scroll-behavior: smooth;
-}
-#background{
-    position: relative;
-    z-index: 290;
-}
-.overlay{
-    position: absolute;
-    display: none;
-    inset: 0; 
-    background-color: rgba(0, 0, 0, 1); 
-    z-index:-4;
-    animation: bg .3s forwards linear ;
-    animation-play-state: paused;
-}
-@keyframes bg {
-    0%{
-        background-color: rgba(0, 0, 0, 1); 
-    }
-    100%{
-        background-color: rgba(0, 0, 0, 0);
-    }
-}
-
-html{
-    scroll-snap-type: y proximity;
-}
-.auto-scroll{
-    scroll-snap-align: start;
-    height: 100vh;
 }
 
 header{
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -114,6 +84,7 @@ footer{
     background-color: rgba(0, 0, 0, 0.579);
     color: white;
     backdrop-filter: blur(10px);
+    margin-top: 60px;
 }
 
 footer p{
