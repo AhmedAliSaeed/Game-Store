@@ -28,3 +28,33 @@ cPrev.addEventListener('click', () => {
         x.style.transform = `rotateY(calc(${rotation - 51.45}deg)) rotateX(-5deg) translateZ(500px)`;
     });
 });
+
+// Genres
+
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryCards = document.querySelectorAll('.category-card');
+
+    categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const category = card.getAttribute('data-category');
+            if (category) {
+                window.location.href = `../../Games/Games.html?category=${encodeURIComponent(category)}`;
+            }
+        });
+    });
+
+    // Slider Navigation
+    const slider = document.querySelector('.category-slider');
+    const prevBtn = document.getElementById('c-prev');
+    const nextBtn = document.getElementById('c-next');
+
+    if (slider && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    }
+});
