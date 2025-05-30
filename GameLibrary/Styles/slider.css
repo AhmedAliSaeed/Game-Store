@@ -19,6 +19,7 @@
     transition: 0.5s;
     left: calc(50% - 12.5%);
     top: 0;
+    cursor: pointer;
 }
 .item img{
     margin: 0 auto;  
@@ -33,6 +34,18 @@
     transform: scale(1.02);
 }
 
+.item i {
+    color: rgba(133, 71, 198, 0);
+    font-size: 70px;
+    position: absolute;
+    top: calc(38%);
+    left: calc(50% - 22px);
+    transition: 0.4s;
+    pointer-events: none;
+}
+.item:hover i{
+    color: rgba(255,255,255,0.85);
+}
 .item  h2{
     font-family:"Quicksand", sans-serif;
     color: white;
