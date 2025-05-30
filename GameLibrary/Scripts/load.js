@@ -62,7 +62,7 @@ function GetData() {
             });
 
             items = document.querySelectorAll('.games-slider .item');
-
+            audio.setAttribute('src', filtered[0].AudioUrl);
             let images = document.querySelectorAll('.games-slider .item img');
             images.forEach(x => {
                 x.addEventListener('mouseenter',()=>{

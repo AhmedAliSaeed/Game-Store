@@ -8,6 +8,7 @@ if(loggedUsername){
 }
 
 var img = document.querySelector('.main-image img');
+var imgClone = document.querySelector('.img-clone');
 var title = document.querySelector('.product-details h1');
 var summary = document.querySelector('.product-details .product-description');
 var totalReviews = document.querySelector('.rating span');
@@ -37,6 +38,7 @@ function GetData() {
             var game = parsed.filter(x => x.Id == id)[0];
 
             img.setAttribute('src', game.ImageUrl);
+            imgClone.setAttribute('src', game.ImageUrl);
             title.textContent = game.Title;
             summary.textContent = game.Summary;
             totalReviews.textContent = `${game.Ratings} / 100`;
@@ -140,4 +142,7 @@ function AddToCart(){
     btn.innerHTML = `
     <i class="fa-solid fa-check"></i> Added To Cart
     `;
+    var cartIcon = document.querySelector('.fa-cart-shopping');
+    cartIcon.style.animationPlayState = 'running';
+    imgClone.style.animationPlayState = 'running';
 }

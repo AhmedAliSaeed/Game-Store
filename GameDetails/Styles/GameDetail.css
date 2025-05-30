@@ -30,23 +30,76 @@ body {
 }
 
 .product-gallery {
-    width: 50%;
+    width: 60%;
+    height: 300px;
     text-align: center;
 }
 
 .main-image {
-    width: 100%;
+    width: 500px;
+    height: 100%;
     margin-bottom: 1rem;
+    margin-inline: auto;
 }
 
 
 .main-image img {
     width: 50%;
-    height: auto;
+    height: 100%;
     border-radius: 8px;
     box-shadow: 0 0 10px black;
 }
 
+.img-clone {
+    position: relative;
+    top: -101%;
+    z-index: 1;
+    box-shadow: 0 0 0 transparent;
+    animation: cart 1s linear forwards;
+    animation-play-state: paused;
+}
+
+
+@keyframes cart {
+    0% {
+        transform: translateX(0%) translateY(0%) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(80%) translateY(-40%)  scale(0.75) rotate(100deg);
+    }
+
+    50% {
+        transform: translateX(160%) translateY(-60%) scale(0.50) rotate(200deg);
+    }
+
+    75% {
+        transform: translateX(240%) translateY(-62%) scale(0.25) rotate(300deg);
+    }
+
+    to {
+        transform: translateX(320%) translateY(-65%)  scale(0) rotate(400deg);
+    }
+}
+.fa-cart-shopping{
+    animation: cart-open .7s linear .85s;
+    animation-play-state: paused;
+}
+
+@keyframes cart-open {
+    0%{
+        transform: scale(1);
+        color: white;
+    }
+    50%{
+        transform: scale(1.7);
+        color: #fa70ce;
+    }
+    100%{
+        transform: scale(1);
+        color: white;
+    }
+}
 .product-details {
     width: 50%;
     padding: 1rem;
@@ -156,9 +209,10 @@ body {
     height: 200px;
 }
 
-.add-to-cart i{
+.add-to-cart i {
     margin-right: 0.5em;
 }
+
 .game-card .show-more a {
     text-decoration: none;
     color: white;
@@ -175,20 +229,22 @@ body {
     margin-top: 1rem;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 12px;
-    box-shadow: 2px 2px 16px rgba(255,255,255,0.1), 2px 2px 24px rgba(255,255,255,0.2);
+    box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.1), 2px 2px 24px rgba(255, 255, 255, 0.2);
 }
 
-.about-game-centered .game-info{
+.about-game-centered .game-info {
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.6em;
 }
-.about-game-centered .game-info h3{
+
+.about-game-centered .game-info h3 {
     font-size: 1.4rem;
 }
-.about-game-centered .game-info p{
+
+.about-game-centered .game-info p {
     text-align: justify;
     font-style: italic;
     font-size: 1.01rem;
@@ -247,6 +303,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
 }
+
 .game-card p {
     margin-bottom: 0.8rem;
 }
