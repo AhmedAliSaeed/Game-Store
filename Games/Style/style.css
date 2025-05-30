@@ -8,76 +8,6 @@
     box-sizing: border-box;
 }
 
-/* Navbar */
-.nav, .footer {
-    width: 100%;
-    color: white;
-    text-align: center;
-    height: 100px;
-}
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background-color: #1010105b;
-    backdrop-filter: blur(10px);
-    z-index: 999;
-    height: 60px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.logo img {
-    position: relative;
-    top: 22px;
-    width: 120px;
-    height: 120px;
-}
-
-.logo h1 {
-    font-size: 38px;
-    font-family: "Nova Square", sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 900;
-    background: linear-gradient(to right, #DC3DDC, #03F6F0);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 27%;
-}
-
-nav p a {
-    color: white;
-    padding: 0 10px;
-    padding-bottom: 15px;
-    text-decoration: none;
-    font-family: "WDXL Lubrifont TC", sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    transition: 0.2s;
-}
-
-nav p a:hover {
-    border-bottom: 5px #8547C6 solid;
-    color: #cc9cff;
-}
-
 /* Hamburger Menu Icon */
 .hamburger {
     display: none;
@@ -191,11 +121,16 @@ body {
 
 .pro-body .products {
     display: grid;
-    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
     gap: 20px;
     text-align: center;
     padding: 0 20px;
+}
+
+.pro-body .products.filtered {
+    grid-template-columns: repeat(auto-fit, 350px); 
+    justify-content: center;
 }
 
 .pro-body .products .container {
@@ -331,8 +266,144 @@ body {
     transform: scale(1.05);
 }
 
+
+/* Media Queries */
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .pro-body .products {
+        grid-template-columns: repeat(auto-fit, 200px); /* عرض ثابت 200px */
+        justify-content: center;
+    }
+
+    .pro-body .products.filtered {
+        grid-template-columns: repeat(auto-fit, 200px); /* نفس العرض الثابت */
+        justify-content: center;
+    }
+
+    .pro-body .products .container {
+        height: 400px;
+        padding: 15px;
+    }
+
+    .pro-body .products .container h1.product-name {
+        font-size: 16px;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .pro-body .products .container img {
+        height: 250px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .pro-body .products {
+        grid-template-columns: repeat(auto-fit, 200px); /* عرض ثابت 200px */
+        justify-content: center;
+    }
+
+    .pro-body .products.filtered {
+        grid-template-columns: repeat(auto-fit, 200px); /* نفس العرض الثابت */
+        justify-content: center;
+    }
+
+    .pro-body .products .container {
+        height: 350px;
+    }
+
+    .pro-body .products .container img {
+        height: 200px;
+    }
+
+    .pro-body .products .container img#image {
+        object-fit: cover;
+    }
+
+    .pro-body .products .container h1.product-name {
+        font-size: 14px;
+    }
+
+    .pro-body .products .container p {
+        font-size: 16px;
+    }
+}
+
+/* Navbar
+.nav, .footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 100px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #1010105b;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    height: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    position: relative;
+    top: 22px;
+    width: 120px;
+    height: 120px;
+}
+
+.logo h1 {
+    font-size: 38px;
+    font-family: "Nova Square", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: linear-gradient(to right, #DC3DDC, #03F6F0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 27%;
+}
+
+nav p a {
+    color: white;
+    padding: 0 10px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+nav p a:hover {
+    border-bottom: 5px #8547C6 solid;
+    color: #cc9cff;
+} */
+
 /* Footer */
-footer {
+/* footer {
     width: 100%;
     height: 100px;
     display: flex;
@@ -368,213 +439,4 @@ footer ul li i {
 footer ul li i:hover {
     font-size: 40px;
     color: #8547C6;
-}
-
-/* Media Queries */
-
-/* Tablets (768px and below) */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: row;
-        height: auto;
-        padding: 10px 20px;
-    }
-
-    .logo img {
-        width: 80px;
-        height: 80px;
-        top: 10px;
-    }
-
-    .logo h1 {
-        font-size: 28px;
-    }
-
-    nav {
-        width: 50%;
-        justify-content: flex-end;
-        gap: 10px;
-    }
-
-    nav p a {
-        font-size: 16px;
-        padding: 0 5px;
-    }
-
-    .pro-body .head img {
-        height: 200px;
-    }
-
-    .pro-body .head p {
-        font-size: 16px;
-        top: 150px;
-    }
-
-    .pro-body .fileration {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pro-body .fileration select,
-    .pro-body .fileration button {
-        width: 80%;
-        max-width: 300px;
-        margin-bottom: 10px;
-    }
-
-    .pro-body .search input {
-        width: 80%;
-    }
-
-    .pro-body .products {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .pro-body .products .container {
-        height: 400px;
-        padding: 15px;
-    }
-
-    .pro-body .products .container h1.product-name {
-        font-size: 16px;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .pro-body .products .container img {
-        height: 250px;
-    }
-
-    .pro-body .show-more {
-        margin: 20px auto;
-    }
-
-    footer {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-
-    footer ul {
-        width: 50%;
-        margin: 10px 0;
-    }
-
-    footer ul li i {
-        font-size: 24px;
-    }
-
-    footer ul li i:hover {
-        font-size: 30px;
-    }
-}
-
-/* Mobile (480px and below) */
-@media screen and (max-width: 480px) {
-    header {
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 60px;
-        height: 60px;
-        top: 5px;
-    }
-
-    .logo h1 {
-        font-size: 22px;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #101010;
-        flex-direction: column;
-        padding: 20px;
-        z-index: 999;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    nav p {
-        margin: 10px 0;
-    }
-
-    nav p a {
-        font-size: 16px;
-        padding: 10px;
-        display: block;
-    }
-
-    .pro-body .head img {
-        height: 150px;
-    }
-
-    .pro-body .head p {
-        font-size: 14px;
-        top: 160px;
-    }
-
-    .pro-body .fileration select,
-    .pro-body .fileration button {
-        width: 90%;
-        font-size: 16px;
-    }
-
-    .pro-body .search input {
-        width: 90%;
-        font-size: 14px;
-    }
-
-    .pro-body .products .container {
-        height: 350px;
-    }
-
-    .pro-body .products .container img {
-        height: 200px;
-      }
-      
-      .pro-body .products .container img #image{
-      object-fit: cover;
-    }
-    .pro-body .products .container h1.product-name {
-        font-size: 14px;
-    }
-
-    .pro-body .products .container p {
-        font-size: 16px;
-    }
-
-    .pro-body .show-more {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
-
-    footer ul {
-        width: 80%;
-    }
-
-    footer ul li i {
-        font-size: 20px;
-    }
-
-    footer ul li i:hover {
-        font-size: 26px;
-    }
-}
+} */

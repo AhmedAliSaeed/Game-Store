@@ -8,22 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetButton = document.getElementById("resetFilters");
 
     const rowsPerClick = 3; 
-    let itemsPerPage = 4; 
+    const itemsPerPage = 12;
     let currentVisible = 0;
-    let products = []; 
+    let products = [];
 
-    function updateItemsPerPage() {
-        const containerWidth = showMoreProducts.offsetWidth;
-        let minItemWidth = 450; 
-        if (window.innerWidth <= 768) {
-            minItemWidth = 200;
-        }
-        const columns = Math.floor(containerWidth / minItemWidth) || 1;
-        itemsPerPage = columns * rowsPerClick;
-        console.log('Columns:', columns, 'Items Per Page:', itemsPerPage);
-    }
-
-    // إخفاء كل العناصر
+    // إخفاء كل العناصر (نستخدمها فقط عند الفلترة أو الريست)
     function hideAllProducts() {
         products.forEach(product => product.style.display = 'none');
     }
@@ -72,24 +61,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // عرض مجموعة العناصر التالية
     function showNextBatch() {
-        updateItemsPerPage(); 
         const filteredProducts = getFilteredProducts();
         const nextVisible = currentVisible + itemsPerPage;
 
         console.log('Current Visible:', currentVisible, 'Next Visible:', nextVisible, 'Filtered Products:', filteredProducts.length);
 
+        // عرض العناصر المفلترة من currentVisible لحد nextVisible
         for (let i = currentVisible; i < nextVisible && i < filteredProducts.length; i++) {
             filteredProducts[i].style.display = 'block';
         }
 
         currentVisible = nextVisible;
 
+        // إخفاء أو إظهار زر Show More
         if (currentVisible >= filteredProducts.length) {
             showMoreBtn.style.display = 'none';
             console.log('Hiding Show More button: No more products');
         } else {
             showMoreBtn.style.display = 'block';
             console.log('Showing Show More button: More products available');
+        }
+
+        // تطبيق .filtered لو العناصر أقل من 4
+        if (filteredProducts.length < 4) {
+            showMoreProducts.classList.add('filtered');
+        } else {
+            showMoreProducts.classList.remove('filtered');
         }
     }
 
@@ -128,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             template.remove();
 
-            // تحديث قائمة العناصر بعد التحميل
+            // تحديث قائمة العناصر
             products = Array.from(showMoreProducts.querySelectorAll('.container'));
             console.log('Products Loaded:', products.length);
 
@@ -162,10 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
         showNextBatch();
     });
 
-    // مستمع لزر Show More
+    // زر Show More
     showMoreBtn.addEventListener('click', showNextBatch);
 
-    // تحديث عدد العناصر عند تغيير حجم الشاشة
+    // تحديث عند تغيير حجم الشاشة
     window.addEventListener('resize', () => {
         products = Array.from(showMoreProducts.querySelectorAll('.container'));
         hideAllProducts();
@@ -179,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // مستمع للهامبرغر منيو
+    // هامبرغر منيو
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
 
