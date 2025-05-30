@@ -15,6 +15,9 @@ body{
     scroll-behavior: smooth;
 }
 
+.nav{
+    height: 100px;
+}
 header{
     position: absolute;
     top: 0;
