@@ -10,7 +10,8 @@
         "Publisher": "Rockstar",
         "Ratings":82,
         "ImageUrl": "../Images/GameCovers/RDR2.jpg",
-        "IngameUrls":["../Images/InGame/RDR2/1.jpg","../Images/InGame/RDR2/2.jpg","../Images/InGame/RDR2/3.jpg"]
+        "IngameUrls":["../Images/InGame/RDR2/1.jpg","../Images/InGame/RDR2/2.jpg","../Images/InGame/RDR2/3.jpg"],
+        "AudioUrl": "../Audios/RDR2.mp3"
     },
     {
         "Id" : 2,
@@ -23,7 +24,8 @@
         "Publisher": "Tencent",
         "Ratings":85,
         "ImageUrl": "../Images/GameCovers/PUBG.jpg",
-        "IngameUrls":["../Images/InGame/PUBG/3.jpg","../Images/InGame/PUBG/2.jpg","../Images/InGame/PUBG/1.webp"]
+        "IngameUrls":["../Images/InGame/PUBG/3.jpg","../Images/InGame/PUBG/2.jpg","../Images/InGame/PUBG/1.webp"],
+        "AudioUrl": "../Audios/PUBG.mp3"
     },
     {
         "Id" : 3,
@@ -36,7 +38,8 @@
         "Publisher": "Capcom",
         "Ratings":81,
         "ImageUrl": "../Images/GameCovers/DMC5.jpg",
-        "IngameUrls":["../Images/InGame/DMC5/1.jpg","../Images/InGame/DMC5/2.jpg","../Images/InGame/DMC5/3.jpg"]
+        "IngameUrls":["../Images/InGame/DMC5/1.jpg","../Images/InGame/DMC5/2.jpg","../Images/InGame/DMC5/3.jpg"],
+        "AudioUrl": "../Audios/DMC5.mp3"
     },
     {
         "Id" : 4,
@@ -49,7 +52,8 @@
         "Publisher": "Sony",
         "ImageUrl": "../Images/GameCovers/GOW.jpg",
         "IngameUrls":["../Images/InGame/GOW/1.avif","../Images/InGame/GOW/2.webp","../Images/InGame/GOW/3.jpg"],
-        "Ratings":93
+        "Ratings":93,
+        "AudioUrl": "../Audios/GOW.mp3"
     },
     {
         "Id" : 5,
@@ -62,7 +66,8 @@
         "Publisher": "EA",
         "Ratings":77,
         "ImageUrl": "../Images/GameCovers/FIFA.jpg",
-        "IngameUrls":["../Images/InGame/FIFA/1.webp","../Images/InGame/FIFA/2.jpg","../Images/InGame/FIFA/3.jpg"]
+        "IngameUrls":["../Images/InGame/FIFA/1.webp","../Images/InGame/FIFA/2.jpg","../Images/InGame/FIFA/3.jpg"],
+        "AudioUrl": "../Audios/FIFA.mp3"
     },
     {
         "Id" : 6,
@@ -75,7 +80,8 @@
         "Publisher": "Ubisoft",
         "Ratings":77,
         "ImageUrl": "../Images/GameCovers/FC5.jpg",
-        "IngameUrls":["../Images/InGame/FC5/1.jpg","../Images/InGame/FC5/2.jpg","../Images/InGame/FC5/3.avif"]
+        "IngameUrls":["../Images/InGame/FC5/1.jpg","../Images/InGame/FC5/2.jpg","../Images/InGame/FC5/3.avif"],
+        "AudioUrl": "../Audios/FC5.mp3"
     },
     {
         "Id" : 7,
@@ -88,7 +94,8 @@
         "Publisher": "Sony",
         "Ratings":97,
         "ImageUrl": "../Images/GameCovers/GOT.jpg",
-        "IngameUrls":["../Images/InGame/GOT/3.jpg","../Images/InGame/GOT/2.jpg","../Images/InGame/GOT/1.avif"]
+        "IngameUrls":["../Images/InGame/GOT/3.jpg","../Images/InGame/GOT/2.jpg","../Images/InGame/GOT/1.avif"],
+        "AudioUrl": "../Audios/GOT.mp3"
     },
     {
         "Id" : 8,
@@ -101,7 +108,8 @@
         "Publisher": "XBOX",
         "Ratings":77,
         "ImageUrl": "../Images/GameCovers/FH5.jpg",
-        "IngameUrls":["../Images/InGame/FH5/1.webp","../Images/InGame/FH5/2.jpg","../Images/InGame/FH5/3.webp"]
+        "IngameUrls":["../Images/InGame/FH5/1.webp","../Images/InGame/FH5/2.jpg","../Images/InGame/FH5/3.webp"],
+        "AudioUrl": "../Audios/FH5.mp3"
     },
     {
         "Id" : 9,
@@ -114,7 +122,8 @@
         "Publisher": "Sony",
         "Ratings":87,
         "ImageUrl": "../Images/GameCovers/CP.jpg",
-        "IngameUrls":["../Images/InGame/CP/1.jpg","../Images/InGame/CP/2.jpg","../Images/InGame/CP/3.webp"]
+        "IngameUrls":["../Images/InGame/CP/1.jpg","../Images/InGame/CP/2.jpg","../Images/InGame/CP/3.webp"],
+        "AudioUrl": "../Audios/CP.mp3"
     },
     {
         "Id" : 10,
@@ -127,7 +136,8 @@
         "Publisher": "Sony",
         "Ratings":78,
         "ImageUrl": "../Images/GameCovers/U4.jpg",
-        "IngameUrls":["../Images/InGame/U4/1.jpg","../Images/InGame/U4/2.jpg","../Images/InGame/U4/3.avif"]
+        "IngameUrls":["../Images/InGame/U4/1.jpg","../Images/InGame/U4/2.jpg","../Images/InGame/U4/3.avif"],
+        "AudioUrl": "../Audios/U4.mp3"
     },
     {
         "Id" : 11,
@@ -140,7 +150,8 @@
         "Publisher": "Ubisoft",
         "Ratings":98,
         "ImageUrl": "../Images/GameCovers/ACS.jpg",
-        "IngameUrls":["../Images/InGame/ACS/1.avif","../Images/InGame/ACS/2.avif","../Images/InGame/ACS/3.jpg"]
+        "IngameUrls":["../Images/InGame/ACS/1.avif","../Images/InGame/ACS/2.avif","../Images/InGame/ACS/3.jpg"],
+        "AudioUrl": "../Audios/ACS.mp3"
     },
     {
         "Id" : 12,
@@ -153,7 +164,8 @@
         "Publisher": "Bandai Namco",
         "Ratings":77,
         "ImageUrl": "../Images/GameCovers/T8.jpg",
-        "IngameUrls":["../Images/InGame/T8/1.webp","../Images/InGame/T8/2.jpg","../Images/InGame/T8/3.webp"]
+        "IngameUrls":["../Images/InGame/T8/1.webp","../Images/InGame/T8/2.jpg","../Images/InGame/T8/3.webp"],
+        "AudioUrl": "../Audios/T8.mp3"
     },
     {
         "Id" : 13,
@@ -166,7 +178,8 @@
         "Publisher": "Capcom",
         "Ratings":79,
         "ImageUrl": "../Images/GameCovers/RE4.jpg",
-        "IngameUrls":["../Images/InGame/RE4/1.webp","../Images/InGame/RE4/2.jpg","../Images/InGame/RE4/3.jpg"]
+        "IngameUrls":["../Images/InGame/RE4/1.webp","../Images/InGame/RE4/2.jpg","../Images/InGame/RE4/3.jpg"],
+        "AudioUrl": "../Audios/RE4.mp3"
     },
     {
         "Id" : 14,
@@ -179,7 +192,8 @@
         "Publisher": "Sony",
         "Ratings":66,
         "ImageUrl": "../Images/GameCovers/TLOU.jpg",
-        "IngameUrls":["../Images/InGame/TLOU/1.jpg","../Images/InGame/TLOU/2.avif","../Images/InGame/TLOU/3.jpg"]
+        "IngameUrls":["../Images/InGame/TLOU/1.jpg","../Images/InGame/TLOU/2.avif","../Images/InGame/TLOU/3.jpg"],
+        "AudioUrl": "../Audios/TLOU.mp3"
     },
     {
         "Id" : 15,
@@ -192,7 +206,8 @@
         "Publisher": "FromSoftware",
         "Ratings":83,
         "ImageUrl": "../Images/GameCovers/ER.jpg",
-        "IngameUrls":["../Images/InGame/ER/1.jpg","../Images/InGame/ER/2.webp","../Images/InGame/ER/3.jpg"]
+        "IngameUrls":["../Images/InGame/ER/1.jpg","../Images/InGame/ER/2.webp","../Images/InGame/ER/3.jpg"],
+        "AudioUrl": "../Audios/ER.mp3"
     },
     {
         "Id" : 16,
@@ -205,7 +220,8 @@
         "Publisher": "EA",
         "Ratings":55,
         "ImageUrl": "../Images/GameCovers/SM2.jpg",
-        "IngameUrls":["../Images/InGame/SM2/1.jpg","../Images/InGame/SM2/2.jpg","../Images/InGame/SM2/3.jpg"]
+        "IngameUrls":["../Images/InGame/SM2/1.jpg","../Images/InGame/SM2/2.jpg","../Images/InGame/SM2/3.jpg"],
+        "AudioUrl": "../Audios/SM2.mp3"
     }
     
 ]

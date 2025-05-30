@@ -1,14 +1,17 @@
 let slider = document.querySelector('.games-slider');
 let background = document.getElementById('background');
 let overlay = document.querySelector('.overlay');
+let audio = document.querySelector('audio');
 let loggedUsername = document.cookie.split('=')[1];
 let user = JSON.parse(localStorage.getItem('users')).filter(x => x.username === loggedUsername)[0];
 let gameIds = user.gamesOwned;
-
+let allGames;
 
 let items = [];
 let active = 0;
 let timeout;
+
+audio.volume = 0.45;
 
 GetData();
 
@@ -46,8 +49,8 @@ function GetData() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var result = xhr.response;
-            var parsed = JSON.parse(result);
-            var filtered = parsed.filter(x => gameIds.includes(x.Id));
+            allGames = JSON.parse(result);
+            var filtered = allGames.filter(x => gameIds.includes(x.Id));
             
             filtered.forEach(x => {
                 slider.innerHTML += `
@@ -70,7 +73,11 @@ function GetData() {
                         overlay.style.animationPlayState = 'running';
                         background.style.background = `url(${img})`;
                         background.style.backgroundSize = 'cover';
-                    },1200)
+
+                        audio.currentTime = 0;
+                        audio.muted = false;
+                        audio.play()
+                    },600)
                     
                 })    
             })
@@ -82,7 +89,8 @@ function GetData() {
                     background.style.background = 'none';
                     background.style.animation = 'none';   
                     background.offsetHeight;                   
-                    background.style.animation = '';    
+                    background.style.animation = '';
+                    audio.pause();    
                 })    
             })
             loadShow();
@@ -95,14 +103,18 @@ function GetData() {
 
 function slideR(){
     active = active + 1 < items.length ? active + 1 : active;
+    audio.setAttribute('src', allGames[active].AudioUrl);
+    audio.pause();
     loadShow();
 };
 
 function SlideL() {
     active = active - 1 >= 0 ? active - 1 : active;
+    audio.setAttribute('src', allGames[active].AudioUrl)
+    audio.pause();
     loadShow();
 }
 
 function StartGame(){
-    alert('Started ' + items[active].children[1].textContent);
+    alert('Launching Game - ' + items[active].children[1].textContent);
 }
