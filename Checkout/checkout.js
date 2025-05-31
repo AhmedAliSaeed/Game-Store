@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let user = users.find(x => x.username === loggedUser);
       user.cartItems = [];
-      user.gamesOwned = cartItems;
+      user.gamesOwned += cartItems;
       localStorage.setItem('users', JSON.stringify(users)); 
       window.location.href = '../GameLibrary/GameLibrary.html'; 
     });
