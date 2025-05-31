@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games Store - Cart</title>
+    <link rel="stylesheet" href="./cart.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Images/Other/logo.png" alt="GameZone Logo" />
+            <a href="../HomePage/index.html">
+                <h1>GameZone</h1>
+            </a>
+        </div>
+        <nav>
+            <p><a href="../Games/Games.html">Browse Games</a></p>
+            <p><a href="#">Cart</a></p>
+            <p><a href="../Login/login.html">Login</a></p>
+            <p><a href="../Register/Register.html">Register</a></p>
+        </nav>
+    </header>
+
+    <main class="cart-page-container mt-5 pt-5">
+        <div class="container-fluid">
+
+            <div class="main_cart">
+                <div class="cart-header p-3">
+                    <h2>
+                        Your Shopping Cart (<span id="cart-item-count">0</span>
+                        items)
+                    </h2>
+                </div>
+                <div id="cart-items-container"></div>
+            </div>
+            <div class="right_side-all ">
+                <div class="right_side">
+                    <h2 class="checkout-title">Order Summary</h2>
+                    <div class="price_indiv">
+                        <p>Subtotal</p>
+                        <p>$<span id="product_total_amt">0.00</span></p>
+                    </div>
+                    <hr class="summary-divider" />
+                    <div class="total-amt">
+                        <p>Total</p>
+                        <p>$<span id="total_cart_amt">0.00</span></p>
+                    </div>
+                    <a href="../Checkout/checkout.html" class="btn-checkout">Proceed to
+                        Checkout</a>
+                </div>
+
+                <div class="purchase-info-box">
+                    <h5>Purchase Information</h5>
+                    <p class="small-text">
+                        Digital purchases grant a license for the product. All
+                        sales are subject to our Terms of Service and Privacy
+                        Policy.
+                    </p>
+                    <p class="small-text">
+                        Review your order carefully before completing the
+                        purchase.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy GameZone 2025 - All rights reserved</p>
+        <ul>
+            <li>
+                <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+                <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            </li>
+            <li>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#" aria-label="Twitch"><i class="fa-brands fa-twitch"></i></a>
+            </li>
+            <li>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+        </ul>
+        <p><a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
