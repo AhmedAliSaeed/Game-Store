@@ -127,5 +127,20 @@ function SlideL() {
 }
 
 function StartGame(){
-    alert('Launching Game - ' + items[active].children[1].textContent);
+    var loadpop = document.querySelector('.launch-screen');
+    var progress = document.querySelector('.launch-screen progress');
+    var img = document.querySelector('.launch-info img');
+    var title = document.querySelector('.launch-game');
+
+    img.setAttribute('src',filtered[active].ImageUrl);
+    title.textContent = filtered[active].Title;
+    loadpop.style.display = 'flex';
+    let interval = setInterval(()=>{
+        progress.value += 1;
+        if(progress.value == 100){
+            clearInterval(interval);
+            loadpop.style.display = 'none';
+            progress.value = 0;
+        }
+    },15);
 }

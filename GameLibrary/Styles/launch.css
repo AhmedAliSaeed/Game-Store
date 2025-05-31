@@ -1,0 +1,64 @@
+.launch-screen{
+    display: none;
+    position: absolute;
+    width: 570px;
+    height: 250px;
+    top: calc(50% - 150px);
+    left: calc(50% - 285px);
+    background-color: #281d2d;
+    border-radius: 20px;
+    z-index: 300;
+    color: white;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.launch-screen .launch-info{
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2.7em;
+}
+.launch-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.launch-screen .launch-info img {
+    width: 160px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.launch-title{
+    margin-top: 13px;
+    font-size: 25px;
+    margin-bottom: 8px;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+}
+.launch-game{
+    font-size: 35px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+.launch-i{
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+.launch-screen progress{
+    width: 90%;
+    margin-inline: auto;
+    border-radius: 3px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 5px;
+  height: 4px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #DC3DDC;
+  border-radius: 5px;
+}
