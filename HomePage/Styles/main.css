@@ -138,7 +138,12 @@ footer ul li i:hover{
 
 .auto-blur{
     animation: blurAnimation both linear;
-    animation-timeline: view();
+    animation-timeline: view(30% 10%);
+}
+
+.auto-blur2{
+    animation: blurAnimation both linear;
+    animation-timeline: view(10% 10%);
 }
 
 @keyframes blurAnimation{
@@ -151,8 +156,8 @@ footer ul li i:hover{
         opacity: 1;
     }
     100%{
-        filter:blur(20px);
-        transform: translateY(-100px);
+        filter:blur(30px);
+        transform: translateY(-200px);
         opacity: 0;
     }
 }
