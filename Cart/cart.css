@@ -449,6 +449,105 @@ hr.summary-divider {
     color: #fd83d6;
     margin-bottom: 0.5rem;
 }
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-alert.show {
+    display: flex;
+}
+
+.alert-content {
+    background: linear-gradient(135deg, #942678, #1a2b5a);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(136, 240, 255, 0.3);
+    animation: fadeIn 0.3s ease-in;
+}
+
+.alert-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.alert-content p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #88f0ff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+}
+
+.alert-ok {
+    padding: 10px 20px;
+    border: 2px solid #88f0ff;
+    border-radius: 8px;
+    background: transparent;
+    color: #88f0ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.alert-ok:hover {
+    background: #88f0ff;
+    color: #0E2148;
+    box-shadow: 0 0 10px rgba(136, 240, 255, 0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media screen and (max-width: 480px) {
+    .alert-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .alert-content h2 {
+        font-size: 20px;
+    }
+
+    .alert-content p {
+        font-size: 14px;
+    }
+
+    .alert-ok {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
 
 /*----------------------------------------------------------------------------------*/
 /* ==== FOOTER (Adapted from your "Home Page CSS" using ONLY the defined palette) ==== */
