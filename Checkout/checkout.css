@@ -30,10 +30,6 @@ a {
     transition: color 0.2s ease-in-out;
 }
 
-a:hover {
-    color: #79ceff;
-    text-decoration: underline;
-}
 
 h1,
 h2,
@@ -78,6 +74,7 @@ header {
 }
 
 .logo h1 {
+    margin-top: 15px;
     font-size: 38px;
     font-family: "Nova Square", sans-serif;
     letter-spacing: 1px;
@@ -89,17 +86,16 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-nav {
+nav{
+    position: relative;
     display: flex;
     justify-content: flex-end;
     gap: .8em;
-    width: 35%;
+    width: 50%;
 }
-
-nav p a {
+nav p a{
     color: white;
     padding: 0 10px;
-    padding-bottom: 15px;
     text-decoration: none;
     font-family: "WDXL Lubrifont TC", sans-serif;
     font-size: 20px;
@@ -107,10 +103,26 @@ nav p a {
     transition: 0.2s;
 }
 
-nav p a:hover {
+nav p {
+    margin-top: 15px;
+    padding-block: 15px;
+    transition: 0.2s;
+    border-bottom: 5px transparent solid;
+    cursor: pointer;
+}
+nav p:hover{
     border-bottom: 5px #8547C6 solid;
     color: #cc9cff;
 }
+nav p:hover * {
+    color: #cc9cff;
+}
+nav i{
+    font-size: 18px;
+    color: white;
+    transition: 0.2s;
+}
+
 
 
 .container-fluid {

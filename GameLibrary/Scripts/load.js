@@ -6,6 +6,7 @@ let loggedUsername = document.cookie.split('=')[1];
 let user = JSON.parse(localStorage.getItem('users')).filter(x => x.username === loggedUsername)[0];
 let gameIds = user.gamesOwned;
 let allGames;
+let filtered;
 
 let items = [];
 let active = 0;
@@ -50,7 +51,7 @@ function GetData() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var result = xhr.response;
             allGames = JSON.parse(result);
-            var filtered = allGames.filter(x => gameIds.includes(x.Id));
+            filtered = allGames.filter(x => gameIds.includes(x.Id));
             
             filtered.forEach(x => {
                 slider.innerHTML += `
@@ -84,7 +85,6 @@ function GetData() {
                         audio.muted = false;
                         audio.play()
                     },600)
-                    
                 })    
             })
             
@@ -114,14 +114,14 @@ function GetData() {
 
 function slideR(){
     active = active + 1 < items.length ? active + 1 : active;
-    audio.setAttribute('src', allGames[active].AudioUrl);
+    audio.setAttribute('src', filtered[active].AudioUrl);
     audio.pause();
     loadShow();
 };
 
 function SlideL() {
     active = active - 1 >= 0 ? active - 1 : active;
-    audio.setAttribute('src', allGames[active].AudioUrl)
+    audio.setAttribute('src', filtered[active].AudioUrl)
     audio.pause();
     loadShow();
 }

@@ -34,10 +34,7 @@ a {
     transition: color 0.2s ease-in-out;
 }
 
-a:hover {
-    color: #79ceff;
-    text-decoration: underline;
-}
+
 
 h1,
 h2,
@@ -58,8 +55,10 @@ h3 {
     font-size: 1.35rem;
 }
 
-header {
+
+header{
     position: absolute;
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -72,43 +71,40 @@ header {
     z-index: 999;
     height: 60px;
 }
-
-.logo {
+.logo{
     display: flex;
     align-items: center;
     color: white;
 }
-
-.logo img {
+.logo img{
     position: relative;
     top: 22px;
     width: 120px;
     height: 120px;
 }
-
-.logo h1 {
+.logo h1{
+    margin-top: 15px;
     font-size: 38px;
     font-family: "Nova Square", sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 900;
-    background: linear-gradient(to right, #DC3DDC, #03F6F0);
+    background: linear-gradient(to right, #DC3DDC , #03F6F0 );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-nav {
+nav{
+    position: relative;
     display: flex;
     justify-content: flex-end;
     gap: .8em;
-    width: 35%;
+    width: 50%;
 }
-
-nav p a {
+nav p a{
     color: white;
     padding: 0 10px;
-    padding-bottom: 15px;
     text-decoration: none;
     font-family: "WDXL Lubrifont TC", sans-serif;
     font-size: 20px;
@@ -116,10 +112,26 @@ nav p a {
     transition: 0.2s;
 }
 
-nav p a:hover {
+nav p {
+    margin-top: 15px;
+    padding-block: 15px;
+    transition: 0.2s;
+    border-bottom: 5px transparent solid;
+    cursor: pointer;
+}
+nav p:hover{
     border-bottom: 5px #8547C6 solid;
     color: #cc9cff;
 }
+nav p:hover * {
+    color: #cc9cff;
+}
+nav i{
+    font-size: 18px;
+    color: white;
+    transition: 0.2s;
+}
+
 
 .container-fluid {
     width: 100%;

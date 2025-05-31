@@ -1,3 +1,11 @@
+const totalCartAmountElement = document.getElementById('total_cart_amt');
+let cartGames;
+let cartItems;
+let users;
+let loggedUser;
+getCartItems();
+GetData();
+
 document.addEventListener('DOMContentLoaded', () => {
   const paymentForm = document.getElementById('payment-form'); 
   const countrySelect = document.getElementById('countrySelect'); 
@@ -35,11 +43,63 @@ document.addEventListener('DOMContentLoaded', () => {
         return; 
       }
 
-      alert('Purchase Complete! Thank you for your order from ' + selectedCountry + '.'); //
+      alert('Purchase Complete! Thank you for your order from ' + selectedCountry + '.');
 
-      localStorage.removeItem('cartItems'); 
-
-      window.location.href = '../HomePage/index.html'; 
+      let user = users.find(x => x.username === loggedUser);
+      user.cartItems = [];
+      user.gamesOwned = cartItems;
+      localStorage.setItem('users', JSON.stringify(users)); 
+      window.location.href = '../GameLibrary/GameLibrary.html'; 
     });
   }
+
+
+
+
 });
+
+
+function calculateTotals() {
+  let totalPrice = 0;
+  let priceIndiv = document.getElementById('price-one');
+  priceIndiv.innerHTML = '';
+
+  cartGames.forEach((item) => {
+    const price = item.Price;
+    totalPrice += price ;
+    
+    priceIndiv.innerHTML += `
+      <div class="price_indiv">
+        <p> ${item.Title} </p>
+        <p>$<span id="product_total_amt">${item.Price}</span></p>
+      </div>
+    `;
+  });
+
+  totalCartAmountElement.textContent = totalPrice.toFixed(2);
+}
+
+function getCartItems() {
+  users = JSON.parse(localStorage.getItem('users'));
+  loggedUser = document.cookie.split('=')[1];
+  let userDetails = users.find(x => x.username === loggedUser);
+  cartItems = userDetails.cartItems;
+}
+
+function GetData() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", `../games.json`, false);
+  
+  xhr.onreadystatechange = function () {
+
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var games = xhr.response;
+      let parsed = JSON.parse(games);
+      cartGames = parsed.filter(x => cartItems.includes(x.Id));
+
+      calculateTotals();
+    }
+  }
+
+  xhr.send();
+}

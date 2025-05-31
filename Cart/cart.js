@@ -1,57 +1,60 @@
-const subtotalElement = document.getElementById('product_total_amt');
-const taxElement = document.getElementById('tax_amt');
 const totalCartAmountElement = document.getElementById('total_cart_amt');
 const cartItemCountElement = document.getElementById('cart-item-count');
 const cartItemsContainer = document.getElementById('cart-items-container');
 
-const TAX_RATE = 0.0;
+let users;
+let loggedUser;
+let cartItems;
+let cartGames;
 
 function getCartItems() {
-  return JSON.parse(localStorage.getItem('cartItems')) || [];
+  users = JSON.parse(localStorage.getItem('users'));
+  loggedUser = document.cookie.split('=')[1];
+  let userDetails = users.find(x => x.username === loggedUser);
+  cartItems = userDetails.cartItems;
 }
 
-function saveCartItems(cartItems) {
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  renderCartItems();
-  calculateTotals();
-  updateCartIconCount();
-}
+function GetData() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", `../games.json`, false);
+  
+  xhr.onreadystatechange = function () {
 
-function renderCartItems() {
-  cartItemsContainer.innerHTML = '';
-  const cartItems = getCartItems();
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var games = xhr.response;
+      let parsed = JSON.parse(games);
+      cartGames = parsed.filter(x => cartItems.includes(x.Id));
 
-  if (cartItems.length === 0) {
-    cartItemsContainer.innerHTML =
-      '<p class="text-light p-3">Your cart is empty.</p>';
-    return;
-  }
+      if (cartGames.length == 0) {
+        cartItemsContainer.innerHTML =
+          '<p> Your cart is empty.</p>';
+        return;
+      }
 
-  cartItems.forEach((item) => {
-    const itemHtml = `
-            <div class="game-item" data-item-id="${item.id}" data-item-price="${
-      item.price
-    }">
+      cartItemCountElement.textContent = cartGames.length;
+
+      cartGames.forEach((item) => {
+        const itemHtml = `
+            <div class="game-item" data-item-id="${item.Id}" data-item-price="${item.Price
+          }">
                 <div class="product_img">
-                    <img src="${
-                      item.image || 'images/default_game_capsule.jpg'
-                    }" alt="${item.name}" />
+                    <img src="${item.ImageUrl || 'images/default_game_capsule.jpg'
+          }" alt="${item.Title}" />
                 </div>
                 <div class="product_details">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
-                            <h3 class="product_name">${item.name}</h3>
+                            <h3 class="product_name">${item.Title}</h3>
                         </div>
                         <div class="price_money">
                             <h3>$<span class="item-price-display">${parseFloat(
-                              item.price
-                            ).toFixed(2)}</span></h3>
+            item.Price
+          ).toFixed(2)}</span></h3>
                         </div>
                     </div>
                     <div class="remove_wish">
-                        <p class="action-link remove-item" data-item-id="${
-                          item.id
-                        }">
+                        <p class="action-link remove-item" data-item-id="${item.Id
+          }">
                             <i class="fas fa-trash-alt"></i> REMOVE
                         </p>
                     </div>
@@ -59,30 +62,45 @@ function renderCartItems() {
             </div>
             <hr class="cart-item-divider" />
         `;
-    cartItemsContainer.innerHTML += itemHtml;
-  });
+        cartItemsContainer.innerHTML += itemHtml;
+      });
 
-  addRemoveEventListeners();
+
+  }}
+  xhr.send();
+}
+
+  function saveCartItems(cartItems) {
+    localStorage.setItem('users', JSON.stringify(cartItems));
+    renderCartItems();
+    calculateTotals();
+  }
+
+  function renderCartItems() {
+    cartItemsContainer.innerHTML = '';
+    const cartItems = getCartItems();
+    GetData();
+    addRemoveEventListeners();
 }
 
 function calculateTotals() {
-  let currentSubtotal = 0;
-  const cartItems = getCartItems();
+  let totalPrice = 0;
+  let priceIndiv = document.getElementById('price-one');
+  priceIndiv.innerHTML = '';
 
-  cartItems.forEach((item) => {
-    const price = parseFloat(item.price);
-    const quantity = 1;
-    if (!isNaN(price)) {
-      currentSubtotal += price * quantity;
-    }
+  cartGames.forEach((item) => {
+    const price = item.Price;
+    totalPrice += price ;
+    
+    priceIndiv.innerHTML += `
+      <div class="price_indiv">
+        <p> ${item.Title} </p>
+        <p>$<span id="product_total_amt">${item.Price}</span></p>
+      </div>
+    `;
   });
 
-  subtotalElement.textContent = currentSubtotal.toFixed(2);
-  const currentTax = currentSubtotal * TAX_RATE;
-  taxElement.textContent = currentTax.toFixed(2);
-  let finalTotal = currentSubtotal + currentTax;
-  totalCartAmountElement.textContent = finalTotal.toFixed(2);
-  cartItemCountElement.textContent = cartItems.length;
+  totalCartAmountElement.textContent = totalPrice.toFixed(2);
 }
 
 function addRemoveEventListeners() {
@@ -90,25 +108,24 @@ function addRemoveEventListeners() {
     button.addEventListener('click', function (event) {
       event.preventDefault();
       const itemIdToRemove = this.getAttribute('data-item-id');
-      let cartItems = getCartItems();
-      cartItems = cartItems.filter((item) => item.id !== itemIdToRemove);
-      saveCartItems(cartItems);
+      console.log(itemIdToRemove);
+      let user = users.find(x => x.username === loggedUser);
+      user.cartItems = user.cartItems.filter(item => item != itemIdToRemove);
+      saveCartItems(users);
     });
   });
 }
 
-function updateCartIconCount() {
-  const cartItems = getCartItems();
-  const cartIconCountElement = document.querySelector('nav a[href="#"] + p'); 
-
-  if (cartIconCountElement) {
-    console.log('Cart count for nav:', cartItems.length);
-  }
-  if (cartItemCountElement) cartItemCountElement.textContent = cartItems.length;
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCartItems();
   calculateTotals();
-  updateCartIconCount();
 });
+
+function gotoCheckout(){
+  if(cartItems.length == 0)
+    alert('Please Add Items to Cart')
+  else{
+    window.location.href = '../Checkout/checkout.html';
+  }
+}

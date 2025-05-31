@@ -12,7 +12,7 @@ else{
     nav.innerHTML= `
         <p><i class="fa-solid fa-gamepad"></i><a href="../Games/Games.html">Browse Games</a></p>
         <p><i class="fa-solid fa-desktop"></i><a href="../GameLibrary/GameLibrary.html">Library</a></p>
-        <p><i class="fa-solid fa-cart-shopping"></i><a href="#">Cart</a></p>
+        <p><i class="fa-solid fa-cart-shopping"></i><a href="../Cart/cart.html">Cart</a></p>
         <p><i class="fa-solid fa-right-to-bracket"></i><a onclick='Logout()'>Logout</a></p>
     `;
 }
