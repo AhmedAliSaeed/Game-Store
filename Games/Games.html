@@ -1,120 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products Page</title>
-    <link rel="stylesheet" href="./Style/style.css" />
-    <link rel="stylesheet" href="./Style/main.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script
-      src="https://kit.fontawesome.com/f0c99c8fcf.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="nav">
-      <header>
-        <div class="logo">
-          <img src="../Images/Other/logo.png" />
-          <h1>GameZone</h1>
-        </div>
-        <div class="hamburger">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <nav>
 
-        </nav>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GamesZone</title>
+  <link rel="stylesheet" href="./Style/main.css">
+  <link rel="stylesheet" href="./Style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/f0c99c8fcf.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" href="../Images/temp/blue_game_padgame_azu_12424.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="nav">
+    <header>
+      <div class="logo">
+        <img src="../Images/Other/logo.png" />
+        <h1>GameZone</h1>
+      </div>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav>
+
+      </nav>
+    </header>
+  </div>
+
+  <div class="pro-body">
+    <div class="head">
+      <div class="glass"></div>
+      <img src="../Images//temp/productsBack2.png" alt="" />
+      <p>Home / Products</p>
+    </div>
+    <div class="fileration">
+      <!-- Name -->
+      <select name="Name" id="sortByName">
+        <option value="">Name</option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A">Z-A</option>
+      </select>
+      <!-- Cateogries -->
+      <select name="Categories" id="filterCategory">
+        <option value="">Category</option>
+        <option value="Action">Action</option>
+        <option value="Sports">Sports</option>
+        <option value="Shooter">Shooter</option>
+        <option value="Horror">Horror</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Racing">Racing</option>
+        <option value="RPG">RPG</option>
+      </select>
+      <!-- Price -->
+      <select id="filterPrice" name="price">
+        <option value="">Price Range</option>
+        <option value="10-50">$10 - $50</option>
+        <option value="51-100">$51 - $100</option>
+        <option value="101-200">$101 - $200</option>
+        <option value="201-300">$201 - $300</option>
+        <option value="301-400">$301 - $400</option>
+        <option value="401-500">$401 - $500</option>
+      </select>
+
+      <button id="resetFilters">
+        <i class="fa-solid fa-power-off"></i> Reset
+      </button>
     </div>
 
-    <div class="pro-body">
-      <div class="head">
-        <div class="glass"></div>
-        <img src="../Images//temp/productsBack2.png" alt="" />
-        <p>Home / Products</p>
-      </div>
-      <div class="fileration">
-        <!-- Name -->
-        <select name="Name" id="sortByName">
-          <option value="">Name</option>
-          <option value="A-Z">A-Z</option>
-          <option value="Z-A">Z-A</option>
-        </select>
-        <!-- Cateogries -->
-        <select name="Categories" id="filterCategory">
-          <option value="">Category</option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="Action">Action</option>
-          <option value="Sports">Sports</option>
-          <option value="Racing">Racing</option>
-        </select>
-        <!-- Price -->
-        <select id="filterPrice" name="price">
-          <option value="">Price Range</option>
-          <option value="10-50">$10 - $50</option>
-          <option value="51-100">$51 - $100</option>
-          <option value="101-200">$101 - $200</option>
-          <option value="201-300">$201 - $300</option>
-          <option value="301-400">$301 - $400</option>
-          <option value="401-500">$401 - $500</option>
-        </select>
+    <div class="search">
+      <input type="text" name="search" placeholder="Search" id="searchInput" />
+    </div>
 
-        <button id="resetFilters">
-          <i class="fa-solid fa-power-off"></i> Reset
+    <div class="products" class="filtered" id="games-container">
+      <div class="container" data-category="Fantasy" data-price="120">
+        <button class="view-btn">
+          <a href="./ProductDetails.html">View Details</a>
         </button>
-      </div>
-
-      <div class="search">
-        <input
-          type="text"
-          name="search"
-          placeholder="Search"
-          id="searchInput"
-        />
-      </div>
-
-      <div class="products" id="games-container">
-        <div class="container" data-category="Fantasy" data-price="120">
-          <button class="view-btn">
-            <a href="./ProductDetails.html">View Details</a>
-          </button>
-          <div class="img">
-            <img src="" alt="" id="image" />
-          </div>
-          <h1 class="product-name" id="proName"></h1>
-          <div class="text">
-            <p>Price: <span id="proPrice">$</span></p>
-            <p class="rate">Rate: <span id="proRate">%</span></p>
-          </div>
-          <p class="date">Published at: <span id="proDate"></span></p>
+        <div class="img">
+          <img src="" alt="" id="image" />
         </div>
+        <h1 class="product-name" id="proName"></h1>
+        <div class="text">
+          <p>Price: <span id="proPrice">$</span></p>
+          <p class="rate">Rate: <span id="proRate">%</span></p>
+        </div>
+        <p class="date">Published at: <span id="proDate"></span></p>
       </div>
-      <button class="show-more">Show more</button>
     </div>
+    <button class="show-more">Show more</button>
+  </div>
 
-    <div class="footer">
-      <footer>
-        <p>&copy GameZone 2025 - All rights reserved</p>
-        <ul>
-          <li><i class="fa-brands fa-youtube"></i></li>
-          <li><i class="fa-brands fa-discord"></i></li>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fa-brands fa-twitch"></i></li>
-          <li><i class="fa-brands fa-tiktok"></i></li>
-        </ul>
-        <p>Privacy Policy</p>
-      </footer>
-    </div>
+  <div class="footer">
+    <footer>
+      <p>&copy GameZone 2025 - All rights reserved</p>
+      <ul>
+        <li><i class="fa-brands fa-youtube"></i></li>
+        <li><i class="fa-brands fa-discord"></i></li>
+        <li><i class="fa-brands fa-facebook"></i></li>
+        <li><i class="fa-brands fa-twitch"></i></li>
+        <li><i class="fa-brands fa-tiktok"></i></li>
+      </ul>
+      <p>Privacy Policy</p>
+    </footer>
+  </div>
 
-    <script src="main.js"></script>
-    <script src="../HomePage/Scripts/nav.js"></script>
+  <script src="main.js"></script>
+  <script src="../HomePage/Scripts/nav.js"></script>
 
-  </body>
+</body>
+
 </html>

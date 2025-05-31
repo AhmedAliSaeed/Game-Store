@@ -7,21 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const resetButton = document.getElementById("resetFilters");
 
-    const rowsPerClick = 3; 
-    let itemsPerPage = 4; 
+    const rowsPerClick = 3;
+    const itemsPerPage = 12;
     let currentVisible = 0;
-    let products = []; 
-
-    function updateItemsPerPage() {
-        const containerWidth = showMoreProducts.offsetWidth;
-        let minItemWidth = 450; 
-        if (window.innerWidth <= 768) {
-            minItemWidth = 200;
-        }
-        const columns = Math.floor(containerWidth / minItemWidth) || 1;
-        itemsPerPage = columns * rowsPerClick;
-        console.log('Columns:', columns, 'Items Per Page:', itemsPerPage);
-    }
+    let products = [];
 
     // إخفاء كل العناصر
     function hideAllProducts() {
@@ -72,11 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // عرض مجموعة العناصر التالية
     function showNextBatch() {
-        updateItemsPerPage(); 
         const filteredProducts = getFilteredProducts();
         const nextVisible = currentVisible + itemsPerPage;
-
-        console.log('Current Visible:', currentVisible, 'Next Visible:', nextVisible, 'Filtered Products:', filteredProducts.length);
 
         for (let i = currentVisible; i < nextVisible && i < filteredProducts.length; i++) {
             filteredProducts[i].style.display = 'block';
@@ -84,12 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentVisible = nextVisible;
 
+        // إخفاء أو إظهار زر Show More
         if (currentVisible >= filteredProducts.length) {
             showMoreBtn.style.display = 'none';
-            console.log('Hiding Show More button: No more products');
         } else {
             showMoreBtn.style.display = 'block';
-            console.log('Showing Show More button: More products available');
+        }
+
+        // تطبيق .filtered لو العناصر أقل من 4
+        if (filteredProducts.length < 4) {
+            showMoreProducts.classList.add('filtered');
+        } else {
+            showMoreProducts.classList.remove('filtered');
         }
     }
 
@@ -98,6 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
         hideAllProducts();
         currentVisible = 0;
         showNextBatch();
+    }
+
+    // قراءة query parameter وتطبيق التصفية التلقائية
+    function applyCategoryFromQuery() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedCategory = urlParams.get('category');
+
+        if (selectedCategory && categorySelect.querySelector(`option[value="${selectedCategory}"]`)) {
+            categorySelect.value = selectedCategory;
+            filterProducts();
+        }
     }
 
     // تحميل العناصر من JSON
@@ -119,7 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 clone.querySelector('#proName').textContent = game.Title;
                 clone.querySelector('#proPrice').textContent = game.Price + '$';
                 clone.querySelector('#proRate').textContent = game.Ratings + '%';
-                clone.querySelector('#proDate').textContent = new Date(game.ReleaseDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                clone.querySelector('#proDate').textContent = new Date(game.ReleaseDate).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric'
+                });
 
                 clone.querySelector('.view-btn a').href = `../GameDetails/gameDetails.html?id=${game.Id}`;
 
@@ -128,17 +134,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             template.remove();
 
-            // تحديث قائمة العناصر بعد التحميل
+            // تحديث قائمة العناصر
             products = Array.from(showMoreProducts.querySelectorAll('.container'));
-            console.log('Products Loaded:', products.length);
 
-            // إظهار الدفعة الأولى
+            // إظهار الدفعة الأولى وتطبيق query parameter
             if (products.length > 0) {
                 showMoreBtn.style.display = 'block';
-                filterProducts();
+                applyCategoryFromQuery(); // تطبيق التصفية التلقائية
             } else {
                 showMoreBtn.style.display = 'none';
-                console.log('No products loaded, hiding Show More button');
             }
         })
         .catch(error => {
@@ -162,10 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
         showNextBatch();
     });
 
-    // مستمع لزر Show More
+    // زر Show More
     showMoreBtn.addEventListener('click', showNextBatch);
 
-    // تحديث عدد العناصر عند تغيير حجم الشاشة
+    // تحديث عند تغيير حجم الشاشة
     window.addEventListener('resize', () => {
         products = Array.from(showMoreProducts.querySelectorAll('.container'));
         hideAllProducts();
@@ -175,11 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
             filterProducts();
         } else {
             showMoreBtn.style.display = 'none';
-            console.log('No products on resize, hiding Show More button');
         }
     });
 
-    // مستمع للهامبرغر منيو
+    // هامبرغر منيو
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
 

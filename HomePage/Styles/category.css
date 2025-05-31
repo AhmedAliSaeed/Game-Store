@@ -1,7 +1,7 @@
 .categories{
-    margin: 40px auto;
+    margin: 30px auto;
     width: 80%;
-    height: 67vh;
+    height: 450px;
     background-color: #3B45A7 ;
     box-shadow: 1px 1px 20px black;
     border-radius: 30px;
@@ -15,7 +15,7 @@
     top: 10%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
-    transform: perspective(1400px);
+    transform: perspective(100em);
 }
 .category-slider .category-card{
     height: fit-content;
@@ -47,3 +47,4 @@
     .category-card h3{
         margin: auto;
     }
+

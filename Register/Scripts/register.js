@@ -126,10 +126,16 @@ function register() {
     };
     var users = getUsers();
     const usernameExists = users.some(user => user.username === newUser.username);
+    const email = users.some(user => user.email === newUser.email);
     if (usernameExists) {
-      alert("Username exists");
+      alert("Username is Used Before");
       return;
     }
+    if (email) {
+      alert("Email is Used Before");
+      return;
+    }
+  
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
     // Show Succeessful Messgage

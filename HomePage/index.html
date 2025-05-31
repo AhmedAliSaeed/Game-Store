@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Store</title>
+    <title>GamesZone</title>
     <link rel="stylesheet" href="Styles/main.css">
     <link rel="stylesheet" href="Styles/featured.css" />
     <link rel="stylesheet" href="Styles/category.css" />
@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" href="../Images/temp/blue_game_padgame_azu_12424.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -93,22 +95,18 @@
                             <button><a href="../GameDetails/gameDetails.html?id=4">See More</a></button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url(../Images/GameCovers/FIFA.jpg);">
+                    <div class="item" style="background-image: url(../Images/GameCovers/ACS.jpg);">
                         <div class="content">
-                            <div class="name">FIFA 23</div>
-                            <div class="des">FIFA 23 is a football simulation game by EA Sports featuring realistic
-                                gameplay, men's and women's World Cups, and club teams from top leagues. It’s the final
-                                FIFA-branded title before EA rebrands the series.</div>
-                            <button><a href="../GameDetails/gameDetails.html?id=5">See More</a></button>
+                            <div class="name">AC Shadows</div>
+                            <div class="des">Assassin’s Creed: Shadows is a stealth-action mobile game featuring Evie Frye navigating Victorian London’s shadows, using stealth, gadgets, and combat to unravel conspiracies.</div>
+                            <button><a href="../GameDetails/gameDetails.html?id=11">See More</a></button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url(../Images/GameCovers/FC5.jpg);">
+                    <div class="item" style="background-image: url(../Images/GameCovers/CP.jpg);">
                         <div class="content">
-                            <div class="name">Far Cry 5</div>
-                            <div class="des">Far Cry 5 is an open-world first-person shooter where you fight against a
-                                dangerous cult in rural Montana. It features exploration, action, and player choice in a
-                                vast, dynamic environment.</div>
-                            <button><a href="../GameDetails/gameDetails.html?id=6">See More</a></button>
+                            <div class="name">Cyberpunk 2077</div>
+                            <div class="des">Cyberpunk 2077 is an open-world RPG set in dystopian Night City, blending deep storytelling, futuristic tech, and intense action in a sprawling neon-lit world.</div>
+                            <button><a href="../GameDetails/gameDetails.html?id=9">See More</a></button>
                         </div>
                     </div>
 
@@ -123,53 +121,44 @@
         </section>
         
         <section class="genres">
-            <h1 class="title">Popular Genres</h1>
-            <div class="categories">
-                <div class="category-slider">
-                <div class="category-card">
-                    <img src="../Images/Categories/Action.jpg" alt="Action Game Cover" />
-                    <h3>Action</h3>
-                </div>
-
-                <div class="category-card">
-                    <img src="../Images/Categories/Sports.jpg" alt="Sports Game Cover" />
-                    <h3>Sports</h3>
-                </div>
-
-                <div class="category-card">
-                    <img src="../Images/Categories/Shooter.jpg" alt="Shooter Game Cover" />
-                    <h3>Shooter</h3>
-                </div>
-
-                <div class="category-card">
-                    <img src="../Images/Categories/Horror.jpg" alt="Horror Game Cover" />
-                    <h3>Horror</h3>
-                </div>
-
-                <div class="category-card">
-                    <img src="../Images/Categories/Fighting.jpg" alt="Fighting Game Cover" />
-                    <h3>Fighting</h3>
-                </div>
-
-                <div class="category-card">
-                    <img src="../Images/Categories/Racing.jpg" alt="Racing Game Cover" />
-                    <h3>Racing</h3>
-                </div>
-
-                <div class="category-card">
-                    <img src="../Images/Categories/RPG.jpg" alt="RPG Game Cover" />
-                    <h3>RPG</h3>
-                </div>
+    <h1 class="title">Popular Genres</h1>
+    <div class="categories">
+        <div class="category-slider">
+            <div class="category-card" data-category="Action">
+                <img src="../Images/Categories/Action.jpg" alt="Action Game Cover" />
+                <h3>Action</h3>
             </div>
-
-            <div class="button">
-                <button id="c-prev" class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                <button id="c-next" class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            <div class="category-card" data-category="Sports">
+                <img src="../Images/Categories/Sports.jpg" alt="Sports Game Cover" />
+                <h3>Sports</h3>
             </div>
+            <div class="category-card" data-category="Shooter">
+                <img src="../Images/Categories/Shooter.jpg" alt="Shooter Game Cover" />
+                <h3>Shooter</h3>
             </div>
-            
-
-        </section>
+            <div class="category-card" data-category="Horror">
+                <img src="../Images/Categories/Horror.jpg" alt="Horror Game Cover" />
+                <h3>Horror</h3>
+            </div>
+            <div class="category-card" data-category="Fighting">
+                <img src="../Images/Categories/Fighting.jpg" alt="Fighting Game Cover" />
+                <h3>Fighting</h3>
+            </div>
+            <div class="category-card" data-category="Racing">
+                <img src="../Images/Categories/Racing.jpg" alt="Racing Game Cover" />
+                <h3>Racing</h3>
+            </div>
+            <div class="category-card" data-category="RPG">
+                <img src="../Images/Categories/RPG.jpg" alt="RPG Game Cover" />
+                <h3>RPG</h3>
+            </div>
+        </div>
+        <div class="button">
+            <button id="c-prev" class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="c-next" class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
 
         <section class="top-rated">
         </section>
