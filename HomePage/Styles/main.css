@@ -176,3 +176,21 @@ footer ul li i:hover{
     }
 
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09152f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8547C6;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a665eb;
+    border-radius: 5px;
+}
