@@ -14,6 +14,7 @@ var summary = document.querySelector('.product-details .product-description');
 var totalReviews = document.querySelector('.rating span');
 var price = document.querySelector('.current-price');
 var btn = document.querySelector('.add-to-cart');
+var stars = document.querySelectorAll('.rating i');
 
 var description = document.querySelector('.game-info p');
 var slider = document.querySelector('.games-slider'); 
@@ -44,7 +45,20 @@ function GetData() {
             totalReviews.textContent = `${game.Ratings} / 100`;
             price.textContent = `${game.Price}$`;
             description.textContent = game.Overview;
-
+            
+            var fullStars = parseInt((game.Ratings - 50) / 10);
+            let i = 0
+            for(i = 0 ; i< fullStars ;i++){
+                stars[i].classList.remove('fa-regular')
+                stars[i].classList.add('fa-solid');
+            }
+            if(game.Ratings % 10 >= 5){
+                stars[i].classList.remove('fa-regular')
+                stars[i].classList.remove('fa-star')
+                stars[i].classList.add('fa-solid');
+                stars[i].classList.add('fa-star-half-stroke')
+            }
+            
             game.IngameUrls.forEach(x => {
                  slider.innerHTML += `
                     <div class="item">

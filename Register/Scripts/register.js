@@ -139,7 +139,7 @@ function register() {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
     // Show Succeessful Messgage
-    window.location.href = '../Login/Login.html'
+    window.location.href = '../Login/login.html'
   }
 }
 

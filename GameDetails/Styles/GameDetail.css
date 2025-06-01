@@ -223,6 +223,7 @@ body {
 
 .about-game-centered {
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: space-between;
     padding: 1rem;
@@ -230,35 +231,30 @@ body {
     border: 1px solid rgb(0, 0, 0);
     border-radius: 12px;
     box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.1), 2px 2px 24px rgba(255, 255, 255, 0.2);
+    background-color: #281d2d;
 }
 
 .about-game-centered .game-info {
-    width: 40%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.6em;
+    margin-inline: auto;
 }
 
 .about-game-centered .game-info h3 {
     font-size: 1.4rem;
-}
-
-.about-game-centered .game-info p {
-    text-align: justify;
-    font-style: italic;
-    font-size: 1.01rem;
-}
-
-.about-game-centered h3 {
     margin-bottom: 0.5rem;
 }
 
-.about-game-centered p {
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+.about-game-centered .game-info p {
+    font-style: italic;
+    font-size: 1.2rem;
+    max-width: 1200px;
+    margin-bottom: 1em;
 }
+
 
 .games-you-may-like {
     margin-top: 2em;

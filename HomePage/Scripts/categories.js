@@ -1,7 +1,7 @@
 let categories = document.querySelectorAll('.category-card');
 let position = 0;
 categories.forEach((x) => {
-    x.style.transform = `rotateY( calc(${position} * (360  / ${categories.length}) * 1deg)) rotateX(-5deg) translateZ(500px)`;
+    x.style.transform = `rotateY( calc(${position} * (360  / ${categories.length}) * 1deg))  translateZ(500px)`;
     position++;
 });
 
@@ -15,7 +15,7 @@ cNext.addEventListener('click', () => {
         let rotation = parseFloat(deg.substring(deg.lastIndexOf('(') + 1 ,deg.indexOf(')') - 3));
         console.log(rotation);
         
-        x.style.transform = `rotateY(calc(${rotation + 51.45}deg)) rotateX(-5deg) translateZ(500px)`;
+        x.style.transform = `rotateY(calc(${rotation + 51.45}deg)) translateZ(500px)`;
     });
 });
 
@@ -25,7 +25,7 @@ cPrev.addEventListener('click', () => {
         let rotation = parseFloat(deg.substring(deg.lastIndexOf('(') + 1 ,deg.indexOf(')') - 3));
         console.log(rotation);
         
-        x.style.transform = `rotateY(calc(${rotation - 51.45}deg)) rotateX(-5deg) translateZ(500px)`;
+        x.style.transform = `rotateY(calc(${rotation - 51.45}deg))  translateZ(500px)`;
     });
 });
 
