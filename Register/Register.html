@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,17 @@
   <link rel="stylesheet" href="../GameDetails/Styles/main.css">
 </head>
 <link rel="icon" href="../Images/temp/blue_game_padgame_azu_12424.ico" type="image/x-icon">
+
 <body>
   <header>
-        <div class="logo">
-            <img src="../Images/Other/logo.png">
-            <h1>GameZone</h1>
-        </div>
-        <nav>
+    <div class="logo">
+      <img src="../Images/Other/logo.png">
+      <h1>GameZone</h1>
+    </div>
+    <nav>
 
-        </nav>
-    </header>
+    </nav>
+  </header>
   <div id="game-background">
     <div class="game-element"><i class="fas fa-gamepad"></i></div>
     <div class="game-element"><i class="fas fa-trophy"></i></div>
@@ -29,40 +31,45 @@
     <div class="game-element"><i class="fas fa-joystick"></i></div>
     <div class="game-element"><i class="fas fa-puzzle-piece"></i></div>
   </div>
-  <div class="container">
-    <h2>Create GameZone Account</h2>
-    <div class="input-box">
-      <label for="username">Username</label>
-      <input type="text" id="username" placeholder="Enter your username" required>
-      <span class="error-message" id="username-error"></span>
-    </div>
-    <div class="input-box">
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <span class="error-message" id="email-error"></span>
-    </div>
-    <div class="input-box password-container">
-      <label for="password">Password</label>
-      <div class="password-input">
-        <input type="password" id="password" placeholder="Enter your password" required>
-        <i class="fas fa-eye-slash toggle-password" data-target="password"></i>
+  <div class="master">
+    <div class="container">
+      <h2>Create GameZone Account</h2>
+      <div class="input-box">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+        <span class="error-message" id="username-error"></span>
       </div>
-      <span class="error-message" id="password-error"></span>
-    </div>
-    <div class="input-box password-container">
-      <label for="confirm-password">Confirm Password</label>
-      <div class="password-input">
-        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
-        <i class="fas fa-eye-slash toggle-password" data-target="confirm-password"></i>
+      <div class="input-box">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <span class="error-message" id="email-error"></span>
       </div>
-      <span class="error-message" id="confirm-password-error"></span>
+      <div class="input-box password-container">
+        <label for="password">Password</label>
+        <div class="password-input">
+          <input type="password" id="password" placeholder="Enter your password" required>
+          <i class="fas fa-eye-slash toggle-password" data-target="password"></i>
+        </div>
+        <span class="error-message" id="password-error"></span>
+      </div>
+      <div class="input-box password-container">
+        <label for="confirm-password">Confirm Password</label>
+        <div class="password-input">
+          <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+          <i class="fas fa-eye-slash toggle-password" data-target="confirm-password"></i>
+        </div>
+        <span class="error-message" id="confirm-password-error"></span>
+      </div>
+      <button onclick="register()">Join GameZone</button>
     </div>
-    <button onclick="register()">Join GameZone</button>
+
   </div>
+
 
   <script src="./Scripts/register.js">
   </script>
-    <script src="../HomePage/Scripts/nav.js"></script>
+  <script src="../HomePage/Scripts/nav.js"></script>
 
 </body>
+
 </html>
