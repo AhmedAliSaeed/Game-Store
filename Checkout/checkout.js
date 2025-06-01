@@ -114,7 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (purchaseSuccessful) {
       let user = users.find((x) => x.username === loggedUser);
       user.cartItems = [];
-      user.gamesOwned += cartItems;
+      cartItems.forEach(x => {
+        user.gamesOwned.push(x);
+      });
       localStorage.setItem('users', JSON.stringify(users));
       window.location.href = '../GameLibrary/GameLibrary.html';
     }

@@ -34,6 +34,14 @@
     transform: scale(1.02);
 }
 
+.item > h1{
+    color: white;
+    font-size: 25px;
+    font-family: "Quicksand", sans-serif;
+    position: absolute;
+    top: calc(50% - 35px);
+    left: 20%;
+}
 .item i {
     color: rgba(133, 71, 198, 0);
     font-size: 70px;

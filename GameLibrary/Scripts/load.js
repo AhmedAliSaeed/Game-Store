@@ -52,67 +52,74 @@ function GetData() {
             var result = xhr.response;
             allGames = JSON.parse(result);
             filtered = allGames.filter(x => gameIds.includes(x.Id));
-            
-            filtered.forEach(x => {
+
+            if (filtered.length == 0) {
                 slider.innerHTML += `
+                    <div class="item">
+                        <h1> No Games In Library </h1>
+                    </div>`
+            }
+            else {
+                filtered.forEach(x => {
+                    slider.innerHTML += `
                     <div class="item" onclick='StartGame()'>
                         <img src="${x.ImageUrl}">
                         <h2>${x.Title}</h2>
                         <i class="fa-solid fa-play"></i>
                     </div>            `
-            });
+                });
+                items = document.querySelectorAll('.games-slider .item');
+                audio.setAttribute('src', filtered[0].AudioUrl);
+                let images = document.querySelectorAll('.games-slider .item img');
+                images.forEach(x => {
+                    x.addEventListener('mouseenter', () => {
+                        var img = x.getAttribute('src');
+                        img = img.replace('GameCovers', 'GameWallpapers');
 
-            items = document.querySelectorAll('.games-slider .item');
-            audio.setAttribute('src', filtered[0].AudioUrl);
-            let images = document.querySelectorAll('.games-slider .item img');
-            images.forEach(x => {
-                x.addEventListener('mouseenter',()=>{
-                    var img = x.getAttribute('src');
-                    img = img.replace('GameCovers','GameWallpapers');
-                    
-                    timeout = setTimeout(()=> {
-                        overlay.style.display = 'block';
-                        overlay.style.animationPlayState = 'running';
-                        background.style.background = `url(${img})`;
-                        background.style.backgroundSize = 'cover';
+                        timeout = setTimeout(() => {
+                            overlay.style.display = 'block';
+                            overlay.style.animationPlayState = 'running';
+                            background.style.background = `url(${img})`;
+                            background.style.backgroundSize = 'cover';
 
-                        items.forEach((x,i) => {
-                            if(i != active)
-                                x.style.opacity = 0;
-                        })
+                            items.forEach((x, i) => {
+                                if (i != active)
+                                    x.style.opacity = 0;
+                            })
 
-                        audio.currentTime = 0;
-                        audio.muted = false;
-                        audio.play()
-                    },600)
-                })    
-            })
-            
-            images.forEach(x => {
-                x.addEventListener('mouseleave',()=>{
-
-                    items.forEach((x,i) => {
-                        if(i != active && Math.abs(i-active) < 4)
-                            x.style.opacity = 0.6;
+                            audio.currentTime = 0;
+                            audio.muted = false;
+                            audio.play()
+                        }, 600)
                     })
-                    clearTimeout(timeout);
-                    overlay.style.display = 'none';
-                    background.style.background = 'none';
-                    background.style.animation = 'none';   
-                    background.offsetHeight;                   
-                    background.style.animation = '';
-                    audio.pause();    
-                })    
-            })
-            loadShow();
+                });
 
+                images.forEach(x => {
+                    x.addEventListener('mouseleave', () => {
+
+                        items.forEach((x, i) => {
+                            if (i != active && Math.abs(i - active) < 4)
+                                x.style.opacity = 0.6;
+                        })
+                        clearTimeout(timeout);
+                        overlay.style.display = 'none';
+                        background.style.background = 'none';
+                        background.style.animation = 'none';
+                        background.offsetHeight;
+                        background.style.animation = '';
+                        audio.pause();
+                    })
+                })
+                loadShow();
+
+            }
         }
     }
     xhr.send();
 }
 
 
-function slideR(){
+function slideR() {
     active = active + 1 < items.length ? active + 1 : active;
     audio.setAttribute('src', filtered[active].AudioUrl);
     audio.pause();
@@ -126,21 +133,21 @@ function SlideL() {
     loadShow();
 }
 
-function StartGame(){
+function StartGame() {
     var loadpop = document.querySelector('.launch-screen');
     var progress = document.querySelector('.launch-screen progress');
     var img = document.querySelector('.launch-info img');
     var title = document.querySelector('.launch-game');
 
-    img.setAttribute('src',filtered[active].ImageUrl);
+    img.setAttribute('src', filtered[active].ImageUrl);
     title.textContent = filtered[active].Title;
     loadpop.style.display = 'flex';
-    let interval = setInterval(()=>{
+    let interval = setInterval(() => {
         progress.value += 1;
-        if(progress.value == 100){
+        if (progress.value == 100) {
             clearInterval(interval);
             loadpop.style.display = 'none';
             progress.value = 0;
         }
-    },15);
+    }, 15);
 }
