@@ -124,7 +124,10 @@ nav i{
 }
 
 
-
+.checkout-page-container{
+    min-height: 100vh;
+    position: relative;
+}
 .container-fluid {
     width: 70%;
     padding-right: 15px;
@@ -133,7 +136,8 @@ nav i{
     margin-left: auto;
     flex: 1;
     display: flex;
-    margin-bottom: 0;
+    margin-bottom: 3em;
+
 }
 
 
@@ -489,7 +493,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.579);
     color: white;
     backdrop-filter: blur(10px);
-    margin-top: 60px;
 }
 
 footer p {
