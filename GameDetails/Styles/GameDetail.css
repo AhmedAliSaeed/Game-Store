@@ -230,8 +230,10 @@ body {
     margin-top: 1rem;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 12px;
+    margin-top: 2em;
+    margin-inline: auto;
+    width: 80%;
     box-shadow: 2px 2px 16px rgba(255, 255, 255, 0.1), 2px 2px 24px rgba(255, 255, 255, 0.2);
-    background-color: #281d2d;
 }
 
 .about-game-centered .game-info {
@@ -245,12 +247,12 @@ body {
 
 .about-game-centered .game-info h3 {
     font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .about-game-centered .game-info p {
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     max-width: 1200px;
     margin-bottom: 1em;
 }
