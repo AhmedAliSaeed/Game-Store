@@ -155,12 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       products = Array.from(showMoreProducts.querySelectorAll(".container"));
 
-      const containerWidth =
-        document.getElementById("games-container").offsetWidth;
-      const itemWidth = products[0]?.offsetWidth || 250;
-      itemsPerRow = Math.floor(containerWidth / itemWidth);
-      itemsPerPage = itemsPerRow * rowsPerClick;
-
       if (products.length > 0) {
         showMoreBtn.style.display = "block";
         applyCategoryFromQuery();
@@ -189,26 +183,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showMoreBtn.addEventListener("click", showNextBatch);
 
-  window.addEventListener("resize", () => {
-    products = Array.from(showMoreProducts.querySelectorAll(".container"));
-
-    const containerWidth =
-      document.getElementById("games-container").offsetWidth;
-    const itemWidth = products[0]?.offsetWidth || 250;
-    itemsPerRow = Math.floor(containerWidth / itemWidth);
-    itemsPerPage = itemsPerRow * rowsPerClick;
-
-    filterProducts();
-  });
-
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector("nav");
-
-  if (hamburger && nav) {
-    hamburger.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  } else {
-    console.log("Hamburger or nav not found");
-  }
 });
