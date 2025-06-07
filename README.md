@@ -2,11 +2,14 @@
 
 🌟 Overview
 GameZone is a dynamic web-based gaming platform designed to deliver an immersive experience for users to browse, purchase, and manage their game library. With a sleek, modern interface, the platform offers user authentication, a curated game catalog, detailed game pages, a shopping cart, a secure checkout system, and a personalized game library. Built with HTML, CSS, and JavaScript, GameZone prioritizes responsiveness and interactivity for an engaging user experience.
+
 ✨ Features
+
 
 🔐 User Authentication:
 Register: Create an account with a username, email, and password, stored securely in localStorage. 📝
 Login: Secure login with a password visibility toggle and "Remember Me" functionality using cookies. 🔑
+
 
 
 🏠 Homepage:
