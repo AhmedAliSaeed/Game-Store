@@ -247,6 +247,14 @@ Below is a placeholder for adding screenshots of the GameZone platform. To inclu
 
 Homepage: ![Homepage](Screenshots/HomePage.png)
 
+![Homepage](Screenshots/HomePage2.png)
+
+![Homepage](Screenshots/HomePage3.png)
+
+![Homepage](Screenshots/HomePage4.png)
+
+![Homepage](Screenshots/HomePage5.png)
+
 Games Page: 
 
 Game Details: 
