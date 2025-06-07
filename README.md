@@ -8,47 +8,66 @@ GameZone is a dynamic web-based gaming platform designed to deliver an immersive
 
 🔐 User Authentication:
 Register: Create an account with a username, email, and password, stored securely in localStorage. 📝
+
 Login: Secure login with a password visibility toggle and "Remember Me" functionality using cookies. 🔑
 
 
 
 🏠 Homepage:
+
 Showcases a hero section with a looping video and a carousel of featured games. 🎥
+
 Highlights popular game genres in an interactive slider. 🎲
+
 
 
 🎲 Games Page:
 A comprehensive catalog with filtering by name, category, and price range. 🔍
+
 Search functionality and a "Show More" button for seamless pagination. 📄
+
 
 
 ℹ️ Game Details:
 Detailed game pages with images, descriptions, ratings, and pricing. 🖼️
+
 Add-to-cart functionality with a smooth animation effect. 🛒
+
 Recommended games tailored to user preferences. 🌟
+
 
 
 🛍️ Cart:
 View and manage cart items with options to remove games. 🗑️
+
 Displays a summary of the total price and a checkout button. 💸
+
 
 
 💳 Checkout:
 Payment form for entering card details and selecting a country. 📋
+
 Validates payment information and updates the user's game library upon successful purchase. ✅
+
 
 
 📚 Game Library:
 Displays purchased games in a visually appealing slider with launch animations. 🚀
+
 Features background music and a loading screen for an immersive experience. 🎵
 
 
+
 📱 Responsive Design:
+
 Optimized for desktops, tablets, and mobile devices with tailored media queries. 🖥️📲
 
 
+
 🚨 Custom Alerts:
+
 Reusable alert system for user feedback (e.g., login errors, purchase confirmation). 📢
+
 
 
 
