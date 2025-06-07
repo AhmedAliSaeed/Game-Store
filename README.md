@@ -245,7 +245,7 @@ Google Fonts (Orbitron, Work Sans, Bungee, Press Start 2P, etc.) for typography.
 Below is a placeholder for adding screenshots of the GameZone platform. To include screenshots, capture images of the key pages (e.g., Homepage, Games, Game Details, Cart, Checkout, Game Library) and place them in a folder (e.g., Screenshots/) within the project directory. Update the links below with the correct file paths.
 
 
-Homepage: 
+Homepage: Screenshots/HomePage.png
 
 Games Page: 
 
